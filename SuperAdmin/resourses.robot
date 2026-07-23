@@ -42,7 +42,7 @@ ${EDIT_SEQUENCE}     2
 Start on Webpage
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
-    Title Should Be    T.Logical Resolution
+    Title Should Be    Equora
     Wait Until Element Is Visible    id=section-1
     FOR    ${i}    IN RANGE    1    4
         Element Should Be Visible    id=section-${i}

@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.6 on darwin)" generated="2026-07-23T11:12:20.829375" rpa="false" schemaversion="5">
+<suite id="s1" name="Horse" source="/Applications/RobotFramework/PJ_Horses/Horses/Horse.robot">
+<test id="s1-t1" name="Go to Horses Page" line="6">
+<kw name="Start Login With SuperAdmin" owner="resourses">
+<kw name="Start on Webpage" owner="resourses">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:21.069334" level="INFO">Opening browser 'chrome' to base url 'https://product.d.tlogical.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T11:12:21.069135" elapsed="2.403321"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T11:12:23.472880" elapsed="0.437029"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:23.912905" level="INFO">Page title is 'Equora'.</msg>
+<arg>Equora</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-07-23T11:12:23.910078" elapsed="0.002890"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=section-1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:23.913076" elapsed="0.015478"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:23.936329" level="INFO">Element 'id=section-1' is displayed.</msg>
+<arg>id=section-${i}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:23.929135" elapsed="0.007266"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2026-07-23T11:12:23.929003" elapsed="0.007455"/>
+</iter>
+<iter>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:23.945726" level="INFO">Element 'id=section-2' is displayed.</msg>
+<arg>id=section-${i}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:23.936688" elapsed="0.009115"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2026-07-23T11:12:23.936590" elapsed="0.009268"/>
+</iter>
+<iter>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:23.954735" level="INFO">Element 'id=section-3' is displayed.</msg>
+<arg>id=section-${i}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:23.946084" elapsed="0.008723"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2026-07-23T11:12:23.945987" elapsed="0.008875"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>4</value>
+<status status="PASS" start="2026-07-23T11:12:23.928687" elapsed="0.026222"/>
+</for>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:23.955227" level="INFO">Clicking link 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:23.955052" elapsed="0.046262"/>
+</kw>
+<status status="PASS" start="2026-07-23T11:12:21.068593" elapsed="2.932859"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>name=email</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.001587" elapsed="0.227522"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:24.229476" level="INFO">Typing text 'superadmin@tlogical.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>superadmin@tlogical.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.229268" elapsed="0.113777"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:24.343405" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2026-07-23T11:12:24.360105" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name=password</arg>
+<arg>a</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.343200" elapsed="0.047764"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:24.391306" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>xpath=//button[normalize-space()='Login']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.391116" elapsed="0.044628"/>
+</kw>
+<status status="PASS" start="2026-07-23T11:12:21.068273" elapsed="3.367580"/>
+</kw>
+<kw name="Redirect to Dashboard" owner="resourses">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}combined/dashboard</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.436391" elapsed="0.412156"/>
+</kw>
+<status status="PASS" start="2026-07-23T11:12:24.436122" elapsed="0.412550"/>
+</kw>
+<kw name="Click Horse Menu" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href='/combined/horses']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.849269" elapsed="0.010229"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:24.859858" level="INFO">Clicking element 'xpath=//a[@href='/combined/horses']'.</msg>
+<arg>xpath=//a[@href='/combined/horses']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.859656" elapsed="0.055665"/>
+</kw>
+<status status="PASS" start="2026-07-23T11:12:24.848949" elapsed="0.066469"/>
+</kw>
+<kw name="Wait Main Page Visible" owner="resourses">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/combined/horses</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.915987" elapsed="0.034616"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[normalize-space()='+ Add Horses']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.950754" elapsed="0.010178"/>
+</kw>
+<status status="PASS" start="2026-07-23T11:12:24.915635" elapsed="0.045393"/>
+</kw>
+<kw name="Click Add Horses Button" owner="resourses">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:24.961621" level="INFO">Clicking element '//button[normalize-space()='+ Add Horses']'.</msg>
+<arg>//button[normalize-space()='+ Add Horses']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.961443" elapsed="0.036493"/>
+</kw>
+<status status="PASS" start="2026-07-23T11:12:24.961219" elapsed="0.036816"/>
+</kw>
+<kw name="Wait For Basic Section Visible" owner="resourses">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}combined/horses/add</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-07-23T11:12:24.998449" elapsed="0.045565"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SECTION_BASIC}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.044225" elapsed="0.016006"/>
+</kw>
+<status status="PASS" start="2026-07-23T11:12:24.998223" elapsed="0.062106"/>
+</kw>
+<kw name="Wait And Select Ant Dropdown" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.060835" elapsed="0.010105"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.071085" elapsed="0.010114"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.081347" elapsed="0.263491"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:25.345340" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Type"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.345039" elapsed="0.039860"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.385044" elapsed="0.223043"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:25.608566" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Horse'])[last()]'.</msg>
+<arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.608319" elapsed="0.043038"/>
+</kw>
+<arg>${BASIC_TYPE}</arg>
+<arg>Horse</arg>
+<status status="PASS" start="2026-07-23T11:12:25.060557" elapsed="0.590895"/>
+</kw>
+<kw name="Verify Input Text Must Not Contain Thai And Special Characters" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD_LOCATOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.651963" elapsed="0.011241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:25.663602" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=originalName'.</msg>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.663354" elapsed="0.180288"/>
+</kw>
+<kw name="Field Value Should Not Contain Special Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:25.850820" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.844141" elapsed="0.006715"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${SPECIAL_CHAR_PATTERN}</arg>
+<arg>msg=พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.850996" elapsed="0.000538"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:25.843829" elapsed="0.007779"/>
+</kw>
+<kw name="Field Value Should Not Contain Thai Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:25.857899" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.852005" elapsed="0.005928"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${THAI_CHAR_PATTERN}</arg>
+<arg>msg=พบภาษาไทยหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.858087" elapsed="0.000501"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:25.851736" elapsed="0.006937"/>
+</kw>
+<kw name="Field Value Should Be Equal To Expected" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:25.865117" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.859090" elapsed="0.006061"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<arg>msg=ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.865278" elapsed="0.000418"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:25.858812" elapsed="0.006956"/>
+</kw>
+<arg>${ORIGINAL_NAME}</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<arg>ABC123</arg>
+<status status="PASS" start="2026-07-23T11:12:25.651673" elapsed="0.214155"/>
+</kw>
+<kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD_LOCATOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.866316" elapsed="0.012257"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:25.878967" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=localName'.</msg>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:25.878722" elapsed="0.150235"/>
+</kw>
+<kw name="Field Value Should Not Contain Special Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:26.035749" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.029449" elapsed="0.006340"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${SPECIAL_CHAR_PATTERN}</arg>
+<arg>msg=พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.035913" elapsed="0.000358"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:26.029136" elapsed="0.007204"/>
+</kw>
+<kw name="Field Value Should Be Equal To Expected" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:26.043773" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.036741" elapsed="0.007070"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<arg>msg=ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.043961" elapsed="0.000397"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:26.036466" elapsed="0.007966"/>
+</kw>
+<arg>${LOCAL_NAME}</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<status status="PASS" start="2026-07-23T11:12:25.866054" elapsed="0.178437"/>
+</kw>
+<kw name="Wait And Select Ant Dropdown" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.044940" elapsed="0.009107"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.054187" elapsed="0.009671"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.063996" elapsed="0.267932"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:26.332603" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Gender"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.332193" elapsed="0.034324"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.366666" elapsed="0.220211"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:26.587252" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Gelding'])[last()]'.</msg>
+<arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.587019" elapsed="0.035489"/>
+</kw>
+<arg>${GENDER}</arg>
+<arg>Gelding</arg>
+<status status="PASS" start="2026-07-23T11:12:26.044699" elapsed="0.577904"/>
+</kw>
+<kw name="Wait And Select Ant Dropdown" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.623082" elapsed="0.011776"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.635011" elapsed="0.009554"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.644703" elapsed="0.269556"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:26.914665" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Country Of Birth"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.914422" elapsed="0.038550"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:26.953117" elapsed="0.220501"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:27.173993" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Thailand'])[last()]'.</msg>
+<arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.173761" elapsed="0.040169"/>
+</kw>
+<arg>${COUNTRY_OF_BIRTH}</arg>
+<arg>Thailand</arg>
+<status status="PASS" start="2026-07-23T11:12:26.622816" elapsed="0.591215"/>
+</kw>
+<kw name="Wait And Select Ant Dropdown" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.214539" elapsed="0.010082"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.224773" elapsed="0.010430"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.235341" elapsed="0.276173"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:27.512001" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Breed"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.511710" elapsed="0.037973"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.549915" elapsed="0.217205"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:27.767497" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Warmblood'])[last()]'.</msg>
+<arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.767261" elapsed="0.038384"/>
+</kw>
+<arg>${BREED}</arg>
+<arg>Warmblood</arg>
+<status status="PASS" start="2026-07-23T11:12:27.214260" elapsed="0.591480"/>
+</kw>
+<kw name="Wait And Select Ant Dropdown" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.806222" elapsed="0.013485"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.819848" elapsed="0.009650"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-07-23T11:12:27.829656" elapsed="0.264005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:28.094201" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Studbook"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.093900" elapsed="0.040886"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.134934" elapsed="0.215678"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:28.351009" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Hanoverian Studbook'])[last()]'.</msg>
+<arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.350762" elapsed="0.039247"/>
+</kw>
+<arg>${STUDBOOK}</arg>
+<arg>Hanoverian Studbook</arg>
+<status status="PASS" start="2026-07-23T11:12:27.805953" elapsed="0.584152"/>
+</kw>
+<kw name="Wait And Select Ant Dropdown" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.390586" elapsed="0.011068"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.401796" elapsed="0.009386"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.411320" elapsed="0.267152"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:28.679017" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Color"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.678718" elapsed="0.037849"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.716730" elapsed="0.217220"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:28.934326" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Bay'])[last()]'.</msg>
+<arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.934091" elapsed="0.037407"/>
+</kw>
+<arg>${COLOR}</arg>
+<arg>Bay</arg>
+<status status="PASS" start="2026-07-23T11:12:28.390321" elapsed="0.581274"/>
+</kw>
+<kw name="Verify Height Field Rejects Value Exceeding Maximum" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEIGHT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.972041" elapsed="0.010655"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:28.983075" level="INFO">Typing text '302' into text field 'name=height'.</msg>
+<arg>${HEIGHT}</arg>
+<arg>${VALUE_HEIGHT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:28.982835" elapsed="0.055452"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.045455" level="INFO">${ACTUAL_VALUE} = 30</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${HEIGHT}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.038430" elapsed="0.007061"/>
+</kw>
+<kw name="Should Not Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${MAX_HEIGHT}</arg>
+<arg>msg=ระบบยอมให้กรอกค่าเกิน max ได้ ซึ่งไม่ควรเกิดขึ้น!</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.045625" elapsed="0.000345"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-23T11:12:29.046311" level="INFO">ค่าที่กรอกได้จริงในช่อง: 30</msg>
+<arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.046085" elapsed="0.000275"/>
+</kw>
+<arg>302</arg>
+<status status="PASS" start="2026-07-23T11:12:28.971805" elapsed="0.074619"/>
+</kw>
+<kw name="Verify Input For Number Only Field" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD_LOCATOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.046841" elapsed="0.009323"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.056538" level="INFO">Typing text 'ทดสอบABC123!@#$%^456&amp;*()789' into text field 'name=microchipNumber'.</msg>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.056302" elapsed="0.206942"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.269446" level="INFO">${ACTUAL_VALUE} = 123456789</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.263392" elapsed="0.006089"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${NON_NUMERIC_PATTERN}</arg>
+<arg>msg=พบตัวอักษรที่ไม่ใช่ตัวเลขหลงเหลือใน field: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.269600" elapsed="0.000395"/>
+</kw>
+<arg>${MICROCHIP_NUMBER}</arg>
+<arg>ทดสอบABC123!@#$%^456&amp;*()789</arg>
+<status status="PASS" start="2026-07-23T11:12:29.046599" elapsed="0.223468"/>
+</kw>
+<kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD_LOCATOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.270491" elapsed="0.010609"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.281483" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=sire'.</msg>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.281244" elapsed="0.157124"/>
+</kw>
+<kw name="Field Value Should Not Contain Special Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.445994" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.439304" elapsed="0.006728"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${SPECIAL_CHAR_PATTERN}</arg>
+<arg>msg=พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.446155" elapsed="0.000356"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:29.438989" elapsed="0.007592"/>
+</kw>
+<kw name="Field Value Should Be Equal To Expected" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.452915" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.446977" elapsed="0.005975"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<arg>msg=ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.453066" elapsed="0.000366"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:29.446708" elapsed="0.006795"/>
+</kw>
+<arg>${SIRE_NAME}</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<status status="PASS" start="2026-07-23T11:12:29.270243" elapsed="0.183318"/>
+</kw>
+<kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD_LOCATOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.454008" elapsed="0.009771"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.464160" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=dame'.</msg>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.463922" elapsed="0.150828"/>
+</kw>
+<kw name="Field Value Should Not Contain Special Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.621531" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.615237" elapsed="0.006331"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${SPECIAL_CHAR_PATTERN}</arg>
+<arg>msg=พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.621700" elapsed="0.000352"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:29.614933" elapsed="0.007190"/>
+</kw>
+<kw name="Field Value Should Be Equal To Expected" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.629163" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.622513" elapsed="0.006689"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<arg>msg=ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.629324" elapsed="0.000374"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:29.622246" elapsed="0.007523"/>
+</kw>
+<arg>${DAME_NAME}</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<status status="PASS" start="2026-07-23T11:12:29.453758" elapsed="0.176070"/>
+</kw>
+<kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD_LOCATOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.630252" elapsed="0.008829"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.639456" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=breeder'.</msg>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.639220" elapsed="0.145274"/>
+</kw>
+<kw name="Field Value Should Not Contain Special Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.791908" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.784983" elapsed="0.007009"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${SPECIAL_CHAR_PATTERN}</arg>
+<arg>msg=พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.792142" elapsed="0.000368"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:29.784678" elapsed="0.007902"/>
+</kw>
+<kw name="Field Value Should Be Equal To Expected" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.798942" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123!@#$%^&amp;*()</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.792977" elapsed="0.005998"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<arg>msg=ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.799082" elapsed="0.000349"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:29.792711" elapsed="0.006812"/>
+</kw>
+<arg>${BREEDER}</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<status status="PASS" start="2026-07-23T11:12:29.630004" elapsed="0.169576"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:29.799896" level="INFO">Double clicking element 'xpath=//h3[normalize-space(.)="Passport"]'.</msg>
+<arg>${PASSPORT_TYPE}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:29.799720" elapsed="0.284550"/>
+</kw>
+<kw name="Wait And Select Ant Dropdown" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.084842" elapsed="0.009465"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.094455" elapsed="0.008982"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.103573" elapsed="0.276529"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:30.380778" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Country"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.380369" elapsed="0.040395"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.420912" elapsed="0.219630"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:30.640917" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Germany'])[last()]'.</msg>
+<arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.640684" elapsed="0.040572"/>
+</kw>
+<arg>${PASSPORT_COUNTRY}</arg>
+<arg>Germany</arg>
+<status status="PASS" start="2026-07-23T11:12:30.084534" elapsed="0.596821"/>
+</kw>
+<kw name="Verify Input Text Must Not Contain Thai And Special Characters" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD_LOCATOR}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.681855" elapsed="0.009291"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:30.691593" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=passportNumber'.</msg>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.691304" elapsed="0.084230"/>
+</kw>
+<kw name="Field Value Should Not Contain Special Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:30.782602" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.776032" elapsed="0.006606"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${SPECIAL_CHAR_PATTERN}</arg>
+<arg>msg=พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.782759" elapsed="0.000350"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:30.775725" elapsed="0.007462"/>
+</kw>
+<kw name="Field Value Should Not Contain Thai Characters" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:30.789412" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.783579" elapsed="0.005866"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${THAI_CHAR_PATTERN}</arg>
+<arg>msg=พบภาษาไทยหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.789559" elapsed="0.000339"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:30.783313" elapsed="0.006654"/>
+</kw>
+<kw name="Field Value Should Be Equal To Expected" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:30.798001" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<var>${ACTUAL_VALUE}</var>
+<arg>${FIELD_LOCATOR}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.790351" elapsed="0.007687"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ACTUAL_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<arg>msg=ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.798166" elapsed="0.000381"/>
+</kw>
+<arg>${FIELD_LOCATOR}</arg>
+<arg>${INPUT_VALUE}</arg>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-23T11:12:30.790089" elapsed="0.008528"/>
+</kw>
+<arg>${PASSPORT_NUMBER}</arg>
+<arg>ทดสอบABC123!@#$%^&amp;*()</arg>
+<arg>ABC123</arg>
+<status status="PASS" start="2026-07-23T11:12:30.681575" elapsed="0.117100"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:30.798994" level="INFO">Clicking button 'xpath=//button[normalize-space()='Add Passport']'.</msg>
+<arg>${ADD_PASSPORT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T11:12:30.798815" elapsed="0.048586"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T11:12:36.102549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-07-23T11:12:36.102818" level="FAIL">Element '//tr[.//div[normalize-space(.)='Original']]' not visible after 5 seconds.</msg>
+<arg>//tr[.//div[normalize-space(.)='Original']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-07-23T11:12:30.847598" elapsed="5.257367">Element '//tr[.//div[normalize-space(.)='Original']]' not visible after 5 seconds.</status>
+</kw>
+<tag>robot:continue-on-failure</tag>
+<status status="FAIL" start="2026-07-23T11:12:21.067751" elapsed="15.037791">Element '//tr[.//div[normalize-space(.)='Original']]' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" start="2026-07-23T11:12:20.830510" elapsed="15.275685"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Horse" id="s1" pass="0" fail="1" skip="0">Horse</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
