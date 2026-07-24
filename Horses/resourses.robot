@@ -195,7 +195,6 @@ Click Date Picker Previous Month
 
 Click Date Picker Next Month
     Click Element    ${DATE_PICKER_NEXT_MONTH}
-
 # ---------- #
 
 
