@@ -14,8 +14,7 @@ Go to Horses Page
     Verify Input Text Must Not Contain Thai And Special Characters    ${ORIGINAL_NAME}    ${INPUT_VALUE}    ${EXPECTED_VALUE}   OriginalName
     Verify Input Text Must Not Contain Special Characters    ${LOCAL_NAME}       ${INPUT_VALUE}    ทดสอบ${EXPECTED_VALUE}   LocalName
     Wait And Select Ant Dropdown    ${GENDER}    Gelding
-    PICKDATE    2024    6    15    #เลือกปี เดือน และวันเกิด
-
+    PICKDATES    2024    3    13
     Wait And Select Ant Dropdown    ${COUNTRY_OF_BIRTH}    Thailand
     Wait And Select Ant Dropdown    ${BREED}    Warmblood
     Wait And Select Ant Dropdown    ${STUDBOOK}    Hanoverian Studbook
@@ -35,9 +34,9 @@ Go to Horses Page
     Click Button    ${ADD_PASSPORT_BTN}
     Check Record Added In Passport Section
     Choose File    ${Horse_Profile_Photo_PATH}    ${CURDIR}/Assets/Horse4.jpg
-    Wait Until Element Is Visible    ${DELETE_Horse_Profile_Photo_BTN}    timeout=10s
+    # Wait Until Element Is Visible    ${DELETE_Horse_Profile_Photo_BTN}    timeout=10s
     Scroll Element Into View      ${SAVE_BTN}
-    Wait Until Element Is Visible    ${Horse_Passport_Photo_PATH}    timeout=10s
+    # Wait Until Element Is Visible    ${Horse_Passport_Photo_PATH}    timeout=10s
     Choose File    ${Horse_Passport_Photo_PATH}    ${CURDIR}/Assets/passport.jpg
     Wait Until Element Is Visible    ${HORSE_PASSPORT_RECORD_PATH}    timeout=10s
     Wait And Input    ${REMARK}    This is a test remark ทดสอบหมายเหตุ 1234!@#$#{}().

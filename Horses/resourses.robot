@@ -9,14 +9,19 @@ ${BROWSER}    chrome
 ${INPUT_VALUE}    ทดสอบABC123!@#$%^&*()
 ${EXPECTED_VALUE}    ABC123
 
+${SECTION_BASIC}    xpath=//h3[normalize-space(.)="Basic Information"]
 ${ORIGINAL_NAME}    name=originalName
 ${LOCAL_NAME}    name=localName
 ${BASIC_TYPE}    xpath=//label[.//span[normalize-space(.)="Type"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]
 ${GENDER}    xpath=//label[.//span[normalize-space(.)="Gender"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]
-
-${DATE_OF_BIRTH}    xpath=//label[.//span[normalize-space(.)="Date Of Birth"]]/preceding-sibling::div//div[contains(@class,"tabler-icon-calendar-week")]
-${TODAY_BTN}    xpath=//button[normalize-space(.)="Today"]
+${DATE_OF_BIRTH}    xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"absolute right-3 top-1/2 translate-y-[-50%] cursor-pointer z-10 bg-white")]
+${YEAR_DROPDOWN}    xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"flex items-center gap-1 cursor-pointer")]
+${YEAR_SELECTOR}    xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"grid-cols-4")]
+# ${TODAY_BTN}    xpath=//button[normalize-space(.)="Today"]
 ${CLICK_SELECT_YEAR}    xpath=//div[@class="flex items-center gap-1 cursor-pointer"]/svg
+${DATE_PICKER_PREVIOUS_MONTH}    xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]
+${DATE_PICKER_NEXT_MONTH}    xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/following-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]
+${DATE_PICKER_DAY}    xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/parent::div[contains(@class,"flex items-center gap-2")]/following-sibling::div[contains(@class,"grid-cols-7")]
 
 ${COUNTRY_OF_BIRTH}    xpath=//label[.//span[normalize-space(.)="Country Of Birth"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]
 ${BREED}    xpath=//label[.//span[normalize-space(.)="Breed"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]
@@ -49,10 +54,10 @@ ${PASSPORT_NUMBER}    name=passportNumber
 ${ADD_PASSPORT_BTN}    xpath=//button[normalize-space()='Add Passport']
 
 ${Horse_Profile_Photo_PATH}    xpath=//h3[normalize-space(.)="Horse Profile Photo"]/parent::div[contains(@class,"flex-col")]//input[@type='file']
-${DELETE_Horse_Profile_Photo_BTN}    xpath=//h3[normalize-space(.)="Horse Profile Photo"]/parents::div[contains(@class,"flex-col")]//button[.//svg[contains(@class,"tabler-icon-trash")]]
+${DELETE_Horse_Profile_Photo_BTN}    xpath=//h3[normalize-space(.)="Horse Profile Photo"]/following-sibling::div//button[contains(@aria-label,'Remove photo')]//svg[contains(@class,"tabler-icon-trash")]
 
-${Horse_Passport_Photo_PATH}    xpath=//h3[normalize-space(.)="Upload file (Passport/Pre-purchase report)"]/parent::div[contains(@class,"flex-col")]//input[@type='file']
-${HORSE_PASSPORT_RECORD_PATH}    xpath=//h3[normalize-space(.)="Upload file (Passport/Pre-purchase report)"]/parent::div[contains(@class,"flex-col")]//div[.//span[normalize-space(.)='passport.jpg']]
+${Horse_Passport_Photo_PATH}    xpath=//h3[contains(text(),'Upload file')]/following-sibling::div[contains(@class,"flex-col")]/descendant::input[@type='file']
+${HORSE_PASSPORT_RECORD_PATH}    xpath=//h3[normalize-space(.)="Upload file (Passport/Pre-purchase report)"]/following-sibling::div[contains(@class,"flex-col")]//div[.//span[normalize-space(.)='passport.jpg']]
 
 ${SAVE_BTN}    xpath=//button[normalize-space(.)='Save']
 ${REMARK}    name=remarks
@@ -178,25 +183,66 @@ Check Required Passport Section
 Check Record Added In Passport Section
     Wait Until Element Is Visible    //tr[.//div[normalize-space(.)='Original'] and .//div[normalize-space(.)='Germany'] and .//div[normalize-space(.)='ABC123']]
 
-Choose Year
-    [Arguments]    ${year}
-    Click Element    ${DATE_OF_BIRTH}
-    Wait Until Element Is Visible    ${TODAY_BTN}    timeout=10s
-    Element Should Be Visible    ${TODAY_BTN}
-    Click Element    ${CLICK_SELECT_YEAR}
-    Wait Until Element Is Visible    xpath=//button[normalize-space(.)='${year}']    timeout=10s
-    Click Element    xpath=//button[normalize-space(.)='${year}']
 
-Choose Month and Day
-    [Arguments]    ${month}    ${day}
-    FOR    ${i}    IN    1    13
-        Click Element    xpath=//div[contains(@class,"flex items-center justify-center")]//svg[path[@d="M0 0h24v24H0V0z"]]"
-        Wait Until Element Is Visible    xpath=//div[normalize-space(.)='${i}']    timeout=10s
-        Element Should Be Visible    xpath=//div[normalize-space(.)='${i}']
-    END
-    Click Element    xpath=//div[normalize-space(.)='${day}']
-    
-PICKDATE
+# ----------- #
+
+Get Date Picker Month Text
+    ${month_text}=    Get Text    xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span
+    RETURN    ${month_text}
+
+Click Date Picker Previous Month
+    Click Element    ${DATE_PICKER_PREVIOUS_MONTH}
+
+Click Date Picker Next Month
+    Click Element    ${DATE_PICKER_NEXT_MONTH}
+
+# ---------- #
+
+
+Get Month Name
+    [Arguments]    ${month}
+    ${month_index}=    Evaluate    int(${month}) - 1
+    ${months}=    Create List    January    February    March    April    May    June    July    August    September    October    November    December
+    ${month_name}=    Get From List    ${months}    ${month_index}
+    RETURN    ${month_name}
+
+Get Month Number From Name
+    [Arguments]    ${month_name}
+    ${months}=    Create List    January    February    March    April    May    June    July    August    September    October    November    December
+    ${month_index}=    Evaluate    ${months}.index("${month_name}") + 1
+    RETURN    ${month_index}
+
+
+PICKDATES
     [Arguments]    ${year}    ${month}    ${day}
-    Choose Year    ${year}
-    Choose Month and Day    ${month}    ${day}
+    Element Should Be Visible    ${Date of Birth}
+    Click Element    ${Date of Birth}
+    Wait Until Element Is Visible    ${YEAR_DROPDOWN}    timeout=10s
+    Click Element    ${YEAR_DROPDOWN}
+    Wait Until Element Is Visible    ${YEAR_SELECTOR}    timeout=10s
+    Click Element    ${YEAR_SELECTOR}/button[normalize-space(.)="${year}"]
+    Element Text Should Be    ${YEAR_DROPDOWN}/span    ${year}
+    ${MONTH_NAME}=    Get Date Picker Month Text
+    ${MONTH_NUMBER}=    Get Month Number From Name    ${MONTH_NAME}
+    ${target_month_number}=    Convert To Integer    ${month}
+
+    FOR    ${attempt}    IN RANGE    12
+        ${current_month}=    Get Date Picker Month Text
+        ${current_month_number}=    Get Month Number From Name    ${current_month}
+        IF    ${current_month_number} == ${target_month_number}
+            Exit For Loop
+        END
+        IF    ${current_month_number} < ${target_month_number}
+            Click Date Picker Next Month
+        ELSE
+            Click Date Picker Previous Month
+        END
+        Sleep    200ms
+    END
+
+    ${current_month}=    Get Date Picker Month Text
+    ${current_month_number}=    Get Month Number From Name    ${current_month}
+    Should Be Equal As Integers    ${current_month_number}    ${target_month_number}
+    Wait Until Element Is Visible    ${DATE_PICKER_DAY}    timeout=10s
+    Click Element    ${DATE_PICKER_DAY}/div[normalize-space(.)="${day}"]
+    
