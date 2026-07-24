@@ -40,6 +40,6 @@ Go to Horses Page
     Choose File    ${Horse_Passport_Photo_PATH}    ${CURDIR}/Assets/passport.jpg
     Wait Until Element Is Visible    ${HORSE_PASSPORT_RECORD_PATH}    timeout=10s
     Wait And Input    ${REMARK}    This is a test remark ทดสอบหมายเหตุ 1234!@#$#{}().
-    Sleep    3s
+    Sleep    3s    #ตรงนี้เดี๋ยวทำ Wait for Field Remark ให้มีข้อความว่า "This is a test remark ทดสอบหมายเหตุ 1234!@#$#{}()." ก่อนถึงจะกด Save
     Click Button    ${SAVE_BTN}
-    Sleep    3s
+    Sleep    3s    #ตรงนี้เดี๋ยวให้รอตรวจสอบหนน้า Table ว่ามีข้อมูลที่เพิ่มเข้ามาแล้วถ
