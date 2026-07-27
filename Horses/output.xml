@@ -1,461 +1,464 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.6 on darwin)" generated="2026-07-24T17:18:52.299171" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.6 on darwin)" generated="2026-07-27T12:00:32.528630" rpa="false" schemaversion="5">
 <suite id="s1" name="Horse" source="/Applications/RobotFramework/PJ_Horses/Horses/Horse.robot">
-<test id="s1-t1" name="Go to Horses Page" line="6">
+<test id="s1-t1" name="Create Horse" line="6">
+<kw name="Open Horse Page" owner="resourses">
 <kw name="Start Login With SuperAdmin" owner="resourses">
 <kw name="Start on Webpage" owner="resourses">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:52.574281" level="INFO">Opening browser 'chrome' to base url 'https://product.d.tlogical.com/'.</msg>
-<arg>${URL}</arg>
+<msg time="2026-07-27T12:00:32.781520" level="INFO">Opening browser 'chrome' to base url 'https://product.d.tlogical.com/'.</msg>
+<arg>${PRODUCT_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-07-24T17:18:52.574075" elapsed="2.337892"/>
+<status status="PASS" start="2026-07-27T12:00:32.781309" elapsed="2.345583"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-07-24T17:18:54.912474" elapsed="0.440798"/>
+<status status="PASS" start="2026-07-27T12:00:35.127323" elapsed="0.433357"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.356971" level="INFO">Page title is 'Equora'.</msg>
+<msg time="2026-07-27T12:00:35.567296" level="INFO">Page title is 'Equora'.</msg>
 <arg>Equora</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.353449" elapsed="0.003610"/>
+<status status="PASS" start="2026-07-27T12:00:35.560851" elapsed="0.006532"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=section-1</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.357198" elapsed="0.016099"/>
+<status status="PASS" start="2026-07-27T12:00:35.567513" elapsed="0.012214"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.380593" level="INFO">Element 'id=section-1' is displayed.</msg>
+<msg time="2026-07-27T12:00:35.587488" level="INFO">Element 'id=section-1' is displayed.</msg>
 <arg>id=section-${i}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.373905" elapsed="0.006762"/>
+<status status="PASS" start="2026-07-27T12:00:35.580343" elapsed="0.007225"/>
 </kw>
 <var name="${i}">1</var>
-<status status="PASS" start="2026-07-24T17:18:55.373773" elapsed="0.006951"/>
+<status status="PASS" start="2026-07-27T12:00:35.580198" elapsed="0.007427"/>
 </iter>
 <iter>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.390198" level="INFO">Element 'id=section-2' is displayed.</msg>
+<msg time="2026-07-27T12:00:35.597028" level="INFO">Element 'id=section-2' is displayed.</msg>
 <arg>id=section-${i}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.380959" elapsed="0.009319"/>
+<status status="PASS" start="2026-07-27T12:00:35.587866" elapsed="0.009277"/>
 </kw>
 <var name="${i}">2</var>
-<status status="PASS" start="2026-07-24T17:18:55.380858" elapsed="0.009476"/>
+<status status="PASS" start="2026-07-27T12:00:35.587760" elapsed="0.009441"/>
 </iter>
 <iter>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.399381" level="INFO">Element 'id=section-3' is displayed.</msg>
+<msg time="2026-07-27T12:00:35.606544" level="INFO">Element 'id=section-3' is displayed.</msg>
 <arg>id=section-${i}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.390562" elapsed="0.008901"/>
+<status status="PASS" start="2026-07-27T12:00:35.597458" elapsed="0.009175"/>
 </kw>
 <var name="${i}">3</var>
-<status status="PASS" start="2026-07-24T17:18:55.390459" elapsed="0.009059"/>
+<status status="PASS" start="2026-07-27T12:00:35.597355" elapsed="0.009336"/>
 </iter>
 <var>${i}</var>
 <value>1</value>
 <value>4</value>
-<status status="PASS" start="2026-07-24T17:18:55.373441" elapsed="0.026126"/>
+<status status="PASS" start="2026-07-27T12:00:35.579858" elapsed="0.026881"/>
 </for>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.399898" level="INFO">Clicking link 'Login'.</msg>
+<msg time="2026-07-27T12:00:35.607076" level="INFO">Clicking link 'Login'.</msg>
 <arg>Login</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.399715" elapsed="0.048250"/>
+<status status="PASS" start="2026-07-27T12:00:35.606890" elapsed="0.046374"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:52.573523" elapsed="2.874605"/>
+<status status="PASS" start="2026-07-27T12:00:32.780773" elapsed="2.872642"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>name=email</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.448281" elapsed="0.016533"/>
+<status status="PASS" start="2026-07-27T12:00:35.653544" elapsed="0.025615"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.465200" level="INFO">Typing text 'superadmin@tlogical.com' into text field 'name=email'.</msg>
+<msg time="2026-07-27T12:00:35.679655" level="INFO">Typing text 'superadmin@tlogical.com' into text field 'name=email'.</msg>
 <arg>name=email</arg>
 <arg>superadmin@tlogical.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.464979" elapsed="0.119305"/>
+<status status="PASS" start="2026-07-27T12:00:35.679315" elapsed="0.120967"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.584663" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2026-07-24T17:18:55.601797" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-07-27T12:00:35.800656" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2026-07-27T12:00:35.817530" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>name=password</arg>
 <arg>a</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.584442" elapsed="0.039192"/>
+<status status="PASS" start="2026-07-27T12:00:35.800441" elapsed="0.038350"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:55.624021" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<msg time="2026-07-27T12:00:35.839162" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
 <arg>xpath=//button[normalize-space()='Login']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.623815" elapsed="0.049546"/>
+<status status="PASS" start="2026-07-27T12:00:35.838953" elapsed="0.045964"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:52.573193" elapsed="3.100297"/>
+<status status="PASS" start="2026-07-27T12:00:32.780516" elapsed="3.104514"/>
 </kw>
 <kw name="Redirect to Dashboard" owner="resourses">
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${URL}combined/dashboard</arg>
+<arg>${PRODUCT_URL}combined/dashboard</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2026-07-24T17:18:55.674190" elapsed="0.414094"/>
+<status status="PASS" start="2026-07-27T12:00:35.885517" elapsed="0.419676"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:55.673791" elapsed="0.414619"/>
+<status status="PASS" start="2026-07-27T12:00:35.885235" elapsed="0.420083"/>
 </kw>
 <kw name="Click Horse Menu" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//a[@href='/combined/horses']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.088939" elapsed="0.009345"/>
+<status status="PASS" start="2026-07-27T12:00:36.305808" elapsed="0.009208"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:56.098606" level="INFO">Clicking element 'xpath=//a[@href='/combined/horses']'.</msg>
+<msg time="2026-07-27T12:00:36.315329" level="INFO">Clicking element 'xpath=//a[@href='/combined/horses']'.</msg>
 <arg>xpath=//a[@href='/combined/horses']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.098424" elapsed="0.056285"/>
+<status status="PASS" start="2026-07-27T12:00:36.315145" elapsed="0.035148"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:56.088698" elapsed="0.066112"/>
+<status status="PASS" start="2026-07-27T12:00:36.305523" elapsed="0.044867"/>
 </kw>
 <kw name="Wait Main Page Visible" owner="resourses">
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>/combined/horses</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.155257" elapsed="0.033655"/>
+<status status="PASS" start="2026-07-27T12:00:36.350763" elapsed="0.002169"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//button[normalize-space()='+ Add Horses']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.189063" elapsed="0.010052"/>
+<status status="PASS" start="2026-07-27T12:00:36.353049" elapsed="0.241353"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:56.155018" elapsed="0.044193"/>
+<status status="PASS" start="2026-07-27T12:00:36.350537" elapsed="0.243956"/>
+</kw>
+<status status="PASS" start="2026-07-27T12:00:32.780220" elapsed="3.814338"/>
 </kw>
 <kw name="Click Add Horses Button" owner="resourses">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:56.199792" level="INFO">Clicking element '//button[normalize-space()='+ Add Horses']'.</msg>
+<msg time="2026-07-27T12:00:36.595196" level="INFO">Clicking element '//button[normalize-space()='+ Add Horses']'.</msg>
 <arg>//button[normalize-space()='+ Add Horses']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.199614" elapsed="0.035787"/>
+<status status="PASS" start="2026-07-27T12:00:36.595018" elapsed="0.032658"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:56.199401" elapsed="0.036103"/>
+<status status="PASS" start="2026-07-27T12:00:36.594792" elapsed="0.032983"/>
 </kw>
 <kw name="Wait For Basic Section Visible" owner="resourses">
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${URL}combined/horses/add</arg>
+<arg>${PRODUCT_URL}combined/horses/add</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.235913" elapsed="0.002217"/>
+<status status="PASS" start="2026-07-27T12:00:36.628193" elapsed="0.002315"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SECTION_BASIC}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.238235" elapsed="0.063368"/>
+<status status="PASS" start="2026-07-27T12:00:36.630630" elapsed="0.218179"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:56.235693" elapsed="0.066017"/>
+<status status="PASS" start="2026-07-27T12:00:36.627974" elapsed="0.220931"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.302476" elapsed="0.010496"/>
+<status status="PASS" start="2026-07-27T12:00:36.849397" elapsed="0.010272"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.313122" elapsed="0.012489"/>
+<status status="PASS" start="2026-07-27T12:00:36.859838" elapsed="0.008654"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.325764" elapsed="0.267346"/>
+<status status="PASS" start="2026-07-27T12:00:36.868626" elapsed="0.278513"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:56.593803" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Type"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:37.147820" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Type"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.593381" elapsed="0.040211"/>
+<status status="PASS" start="2026-07-27T12:00:37.147410" elapsed="0.039878"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.633740" elapsed="0.222573"/>
+<status status="PASS" start="2026-07-27T12:00:37.187436" elapsed="0.222456"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:56.856686" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Horse'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:37.410271" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Horse'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.856455" elapsed="0.041692"/>
+<status status="PASS" start="2026-07-27T12:00:37.410033" elapsed="0.040514"/>
 </kw>
 <arg>${BASIC_TYPE}</arg>
 <arg>Horse</arg>
-<status status="PASS" start="2026-07-24T17:18:56.302004" elapsed="0.596243"/>
+<status status="PASS" start="2026-07-27T12:00:36.849121" elapsed="0.601520"/>
 </kw>
 <kw name="Verify Input Text Must Not Contain Thai And Special Characters" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD_LOCATOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.898799" elapsed="0.009777"/>
+<status status="PASS" start="2026-07-27T12:00:37.451186" elapsed="0.010811"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:56.908968" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=originalName'.</msg>
+<msg time="2026-07-27T12:00:37.462385" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'xpath=//*[@name='originalName']'.</msg>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:56.908722" elapsed="0.178122"/>
+<status status="PASS" start="2026-07-27T12:00:37.462143" elapsed="0.176043"/>
 </kw>
 <kw name="Field Value Should Not Contain Special Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.096004" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<msg time="2026-07-27T12:00:37.646008" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.087366" elapsed="0.008680"/>
+<status status="PASS" start="2026-07-27T12:00:37.638741" elapsed="0.007308"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${SPECIAL_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.096189" elapsed="0.000825"/>
+<status status="PASS" start="2026-07-27T12:00:37.646193" elapsed="0.000783"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:18:57.097423" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
+<msg time="2026-07-27T12:00:37.647357" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.097143" elapsed="0.000326"/>
+<status status="PASS" start="2026-07-27T12:00:37.647099" elapsed="0.000305"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:18:57.087034" elapsed="0.010499"/>
+<status status="PASS" start="2026-07-27T12:00:37.638385" elapsed="0.009082"/>
 </kw>
 <kw name="Field Value Should Not Contain Thai Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.103938" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<msg time="2026-07-27T12:00:37.654084" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.097961" elapsed="0.006010"/>
+<status status="PASS" start="2026-07-27T12:00:37.647898" elapsed="0.006219"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${THAI_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบภาษาไทยหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.104080" elapsed="0.000408"/>
+<status status="PASS" start="2026-07-27T12:00:37.654226" elapsed="0.000426"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:18:57.104814" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
+<msg time="2026-07-27T12:00:37.654993" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.104595" elapsed="0.000263"/>
+<status status="PASS" start="2026-07-27T12:00:37.654759" elapsed="0.000286"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:18:57.097663" elapsed="0.007255"/>
+<status status="PASS" start="2026-07-27T12:00:37.647601" elapsed="0.007509"/>
 </kw>
 <kw name="Field Value Should Be Equal To Expected" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.112261" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<msg time="2026-07-27T12:00:37.661956" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.105340" elapsed="0.006958"/>
+<status status="PASS" start="2026-07-27T12:00:37.655588" elapsed="0.006402"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>msg=Field ${FIELD_NAME} ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.112433" elapsed="0.000419"/>
+<status status="PASS" start="2026-07-27T12:00:37.662114" elapsed="0.000416"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:18:57.105046" elapsed="0.007879"/>
+<status status="PASS" start="2026-07-27T12:00:37.655242" elapsed="0.007360"/>
 </kw>
 <arg>${ORIGINAL_NAME}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>OriginalName</arg>
-<status status="PASS" start="2026-07-24T17:18:56.898479" elapsed="0.214506"/>
+<status status="PASS" start="2026-07-27T12:00:37.450864" elapsed="0.211798"/>
 </kw>
 <kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD_LOCATOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.113458" elapsed="0.009638"/>
+<status status="PASS" start="2026-07-27T12:00:37.663127" elapsed="0.009703"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.123481" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=localName'.</msg>
+<msg time="2026-07-27T12:00:37.673220" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=localName'.</msg>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.123243" elapsed="0.149684"/>
+<status status="PASS" start="2026-07-27T12:00:37.672974" elapsed="0.148560"/>
 </kw>
 <kw name="Field Value Should Not Contain Special Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.279724" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:37.828383" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.273445" elapsed="0.006314"/>
+<status status="PASS" start="2026-07-27T12:00:37.822085" elapsed="0.006334"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${SPECIAL_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.279873" elapsed="0.000371"/>
+<status status="PASS" start="2026-07-27T12:00:37.828552" elapsed="0.000376"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:18:57.280591" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:37.829245" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.280369" elapsed="0.000266"/>
+<status status="PASS" start="2026-07-27T12:00:37.829027" elapsed="0.000262"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:18:57.273116" elapsed="0.007581"/>
+<status status="PASS" start="2026-07-27T12:00:37.821732" elapsed="0.007619"/>
 </kw>
 <kw name="Field Value Should Be Equal To Expected" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.287474" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:37.836016" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.281128" elapsed="0.006381"/>
+<status status="PASS" start="2026-07-27T12:00:37.829761" elapsed="0.006290"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>msg=Field ${FIELD_NAME} ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.287622" elapsed="0.000404"/>
+<status status="PASS" start="2026-07-27T12:00:37.836165" elapsed="0.000396"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:18:57.280839" elapsed="0.007261"/>
+<status status="PASS" start="2026-07-27T12:00:37.829472" elapsed="0.007160"/>
 </kw>
 <arg>${LOCAL_NAME}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>ทดสอบ${EXPECTED_VALUE}</arg>
 <arg>LocalName</arg>
-<status status="PASS" start="2026-07-24T17:18:57.113168" elapsed="0.174997"/>
+<status status="PASS" start="2026-07-27T12:00:37.662838" elapsed="0.173853"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.288615" elapsed="0.009891"/>
+<status status="PASS" start="2026-07-27T12:00:37.837107" elapsed="0.009375"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.298652" elapsed="0.009059"/>
+<status status="PASS" start="2026-07-27T12:00:37.846623" elapsed="0.009428"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.307849" elapsed="0.271066"/>
+<status status="PASS" start="2026-07-27T12:00:37.856192" elapsed="0.271314"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.579577" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Gender"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:38.128172" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Gender"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.579177" elapsed="0.034085"/>
+<status status="PASS" start="2026-07-27T12:00:38.127766" elapsed="0.034142"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.613408" elapsed="0.218422"/>
+<status status="PASS" start="2026-07-27T12:00:38.162051" elapsed="0.218386"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.832204" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Gelding'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:38.380810" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Gelding'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.831972" elapsed="0.035520"/>
+<status status="PASS" start="2026-07-27T12:00:38.380577" elapsed="0.036919"/>
 </kw>
 <arg>${GENDER}</arg>
 <arg>Gelding</arg>
-<status status="PASS" start="2026-07-24T17:18:57.288376" elapsed="0.579213"/>
+<status status="PASS" start="2026-07-27T12:00:37.836873" elapsed="0.580716"/>
 </kw>
 <kw name="PICKDATES" owner="resourses">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.879403" level="INFO">Element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"absolute right-3 top-1/2 translate-y-[-50%] cursor-pointer z-10 bg-white")]' is displayed.</msg>
+<msg time="2026-07-27T12:00:38.429126" level="INFO">Element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"absolute right-3 top-1/2 translate-y-[-50%] cursor-pointer z-10 bg-white")]' is displayed.</msg>
 <arg>${Date of Birth}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.868224" elapsed="0.011260"/>
+<status status="PASS" start="2026-07-27T12:00:38.418230" elapsed="0.010980"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.879827" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"absolute right-3 top-1/2 translate-y-[-50%] cursor-pointer z-10 bg-white")]'.</msg>
+<msg time="2026-07-27T12:00:38.429551" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"absolute right-3 top-1/2 translate-y-[-50%] cursor-pointer z-10 bg-white")]'.</msg>
 <arg>${Date of Birth}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.879615" elapsed="0.034522"/>
+<status status="PASS" start="2026-07-27T12:00:38.429339" elapsed="0.033283"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${YEAR_DROPDOWN}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.914314" elapsed="0.010717"/>
+<status status="PASS" start="2026-07-27T12:00:38.462769" elapsed="0.011140"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.925409" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"flex items-center gap-1 cursor-pointer")]'.</msg>
+<msg time="2026-07-27T12:00:38.474282" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"flex items-center gap-1 cursor-pointer")]'.</msg>
 <arg>${YEAR_DROPDOWN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.925189" elapsed="0.032440"/>
+<status status="PASS" start="2026-07-27T12:00:38.474060" elapsed="0.030599"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${YEAR_SELECTOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.957777" elapsed="0.009792"/>
+<status status="PASS" start="2026-07-27T12:00:38.504811" elapsed="0.010763"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:57.967992" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"grid-cols-4")]/button[normalize-space(.)="2024"]'.</msg>
+<msg time="2026-07-27T12:00:38.516004" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"grid-cols-4")]/button[normalize-space(.)="2024"]'.</msg>
 <arg>${YEAR_SELECTOR}/button[normalize-space(.)="${year}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:57.967711" elapsed="0.033480"/>
+<status status="PASS" start="2026-07-27T12:00:38.515717" elapsed="0.032926"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.001595" level="INFO">Verifying element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"flex items-center gap-1 cursor-pointer")]/span' contains exact text '2024'.</msg>
+<msg time="2026-07-27T12:00:38.549047" level="INFO">Verifying element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"flex items-center gap-1 cursor-pointer")]/span' contains exact text '2024'.</msg>
 <arg>${YEAR_DROPDOWN}/span</arg>
 <arg>${year}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.001346" elapsed="0.014743"/>
+<status status="PASS" start="2026-07-27T12:00:38.548794" elapsed="0.014645"/>
 </kw>
 <kw name="Get Date Picker Month Text" owner="resourses">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.026592" level="INFO">${month_text} = July</msg>
+<msg time="2026-07-27T12:00:38.574023" level="INFO">${month_text} = July</msg>
 <var>${month_text}</var>
 <arg>xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.016529" elapsed="0.010102"/>
+<status status="PASS" start="2026-07-27T12:00:38.563863" elapsed="0.010199"/>
 </kw>
 <return>
 <value>${month_text}</value>
-<status status="PASS" start="2026-07-24T17:18:58.026733" elapsed="0.000096"/>
+<status status="PASS" start="2026-07-27T12:00:38.574168" elapsed="0.000096"/>
 </return>
-<msg time="2026-07-24T17:18:58.026970" level="INFO">${MONTH_NAME} = July</msg>
+<msg time="2026-07-27T12:00:38.574412" level="INFO">${MONTH_NAME} = July</msg>
 <var>${MONTH_NAME}</var>
-<status status="PASS" start="2026-07-24T17:18:58.016308" elapsed="0.010687"/>
+<status status="PASS" start="2026-07-27T12:00:38.563640" elapsed="0.010798"/>
 </kw>
 <kw name="Get Month Number From Name" owner="resourses">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.027679" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<msg time="2026-07-27T12:00:38.575129" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
 <var>${months}</var>
 <arg>January</arg>
 <arg>February</arg>
@@ -470,52 +473,52 @@
 <arg>November</arg>
 <arg>December</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.027377" elapsed="0.000330"/>
+<status status="PASS" start="2026-07-27T12:00:38.574824" elapsed="0.000333"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.028282" level="INFO">${month_index} = 7</msg>
+<msg time="2026-07-27T12:00:38.575733" level="INFO">${month_index} = 7</msg>
 <var>${month_index}</var>
 <arg>${months}.index("${month_name}") + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.027822" elapsed="0.000488"/>
+<status status="PASS" start="2026-07-27T12:00:38.575269" elapsed="0.000493"/>
 </kw>
 <return>
 <value>${month_index}</value>
-<status status="PASS" start="2026-07-24T17:18:58.028363" elapsed="0.000037"/>
+<status status="PASS" start="2026-07-27T12:00:38.575814" elapsed="0.000039"/>
 </return>
-<msg time="2026-07-24T17:18:58.028516" level="INFO">${MONTH_NUMBER} = 7</msg>
+<msg time="2026-07-27T12:00:38.575972" level="INFO">${MONTH_NUMBER} = 7</msg>
 <var>${MONTH_NUMBER}</var>
 <arg>${MONTH_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:18:58.027142" elapsed="0.001399"/>
+<status status="PASS" start="2026-07-27T12:00:38.574586" elapsed="0.001411"/>
 </kw>
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.028907" level="INFO">${target_month_number} = 3</msg>
+<msg time="2026-07-27T12:00:38.576368" level="INFO">${target_month_number} = 3</msg>
 <var>${target_month_number}</var>
 <arg>${month}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.028633" elapsed="0.000301"/>
+<status status="PASS" start="2026-07-27T12:00:38.576091" elapsed="0.000304"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Get Date Picker Month Text" owner="resourses">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.036835" level="INFO">${month_text} = July</msg>
+<msg time="2026-07-27T12:00:38.585094" level="INFO">${month_text} = July</msg>
 <var>${month_text}</var>
 <arg>xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.029486" elapsed="0.007387"/>
+<status status="PASS" start="2026-07-27T12:00:38.576962" elapsed="0.008174"/>
 </kw>
 <return>
 <value>${month_text}</value>
-<status status="PASS" start="2026-07-24T17:18:58.036939" elapsed="0.000042"/>
+<status status="PASS" start="2026-07-27T12:00:38.585208" elapsed="0.000048"/>
 </return>
-<msg time="2026-07-24T17:18:58.037106" level="INFO">${current_month} = July</msg>
+<msg time="2026-07-27T12:00:38.585390" level="INFO">${current_month} = July</msg>
 <var>${current_month}</var>
-<status status="PASS" start="2026-07-24T17:18:58.029312" elapsed="0.007820"/>
+<status status="PASS" start="2026-07-27T12:00:38.576782" elapsed="0.008633"/>
 </kw>
 <kw name="Get Month Number From Name" owner="resourses">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.037787" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<msg time="2026-07-27T12:00:38.586115" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
 <var>${months}</var>
 <arg>January</arg>
 <arg>February</arg>
@@ -530,84 +533,84 @@
 <arg>November</arg>
 <arg>December</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.037498" elapsed="0.000318"/>
+<status status="PASS" start="2026-07-27T12:00:38.585817" elapsed="0.000327"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.038292" level="INFO">${month_index} = 7</msg>
+<msg time="2026-07-27T12:00:38.586630" level="INFO">${month_index} = 7</msg>
 <var>${month_index}</var>
 <arg>${months}.index("${month_name}") + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.037924" elapsed="0.000396"/>
+<status status="PASS" start="2026-07-27T12:00:38.586249" elapsed="0.000409"/>
 </kw>
 <return>
 <value>${month_index}</value>
-<status status="PASS" start="2026-07-24T17:18:58.038369" elapsed="0.000031"/>
+<status status="PASS" start="2026-07-27T12:00:38.586707" elapsed="0.000032"/>
 </return>
-<msg time="2026-07-24T17:18:58.038513" level="INFO">${current_month_number} = 7</msg>
+<msg time="2026-07-27T12:00:38.586851" level="INFO">${current_month_number} = 7</msg>
 <var>${current_month_number}</var>
 <arg>${current_month}</arg>
-<status status="PASS" start="2026-07-24T17:18:58.037271" elapsed="0.001267"/>
+<status status="PASS" start="2026-07-27T12:00:38.585577" elapsed="0.001299"/>
 </kw>
 <if>
 <branch type="IF" condition="${current_month_number} == ${target_month_number}">
 <kw name="Exit For Loop" owner="BuiltIn">
 <doc>Stops executing the enclosing FOR loop.</doc>
-<status status="NOT RUN" start="2026-07-24T17:18:58.038850" elapsed="0.000039"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.587178" elapsed="0.000028"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.038648" elapsed="0.000277"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.586986" elapsed="0.000254"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.038616" elapsed="0.000355"/>
+<status status="PASS" start="2026-07-27T12:00:38.586955" elapsed="0.000329"/>
 </if>
 <if>
 <branch type="IF" condition="${current_month_number} &lt; ${target_month_number}">
 <kw name="Click Date Picker Next Month" owner="resourses">
-<status status="NOT RUN" start="2026-07-24T17:18:58.039242" elapsed="0.000030"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.587532" elapsed="0.000029"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.039039" elapsed="0.000265"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.587341" elapsed="0.000258"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click Date Picker Previous Month" owner="resourses">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.039885" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
+<msg time="2026-07-27T12:00:38.588106" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
 <arg>${DATE_PICKER_PREVIOUS_MONTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.039667" elapsed="0.032561"/>
+<status status="PASS" start="2026-07-27T12:00:38.587918" elapsed="0.032503"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.039448" elapsed="0.032875"/>
+<status status="PASS" start="2026-07-27T12:00:38.587738" elapsed="0.032780"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.039343" elapsed="0.033018"/>
+<status status="PASS" start="2026-07-27T12:00:38.587635" elapsed="0.032921"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.039017" elapsed="0.033386"/>
+<status status="PASS" start="2026-07-27T12:00:38.587325" elapsed="0.033274"/>
 </if>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.273247" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2026-07-27T12:00:38.821226" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.072524" elapsed="0.200915"/>
+<status status="PASS" start="2026-07-27T12:00:38.620718" elapsed="0.200698"/>
 </kw>
 <var name="${attempt}">0</var>
-<status status="PASS" start="2026-07-24T17:18:58.029202" elapsed="0.244347"/>
+<status status="PASS" start="2026-07-27T12:00:38.576671" elapsed="0.244847"/>
 </iter>
 <iter>
 <kw name="Get Date Picker Month Text" owner="resourses">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.283517" level="INFO">${month_text} = June</msg>
+<msg time="2026-07-27T12:00:38.831779" level="INFO">${month_text} = June</msg>
 <var>${month_text}</var>
 <arg>xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.274598" elapsed="0.008956"/>
+<status status="PASS" start="2026-07-27T12:00:38.822576" elapsed="0.009236"/>
 </kw>
 <return>
 <value>${month_text}</value>
-<status status="PASS" start="2026-07-24T17:18:58.283625" elapsed="0.000042"/>
+<status status="PASS" start="2026-07-27T12:00:38.831872" elapsed="0.000041"/>
 </return>
-<msg time="2026-07-24T17:18:58.283793" level="INFO">${current_month} = June</msg>
+<msg time="2026-07-27T12:00:38.832036" level="INFO">${current_month} = June</msg>
 <var>${current_month}</var>
-<status status="PASS" start="2026-07-24T17:18:58.274191" elapsed="0.009627"/>
+<status status="PASS" start="2026-07-27T12:00:38.822165" elapsed="0.009897"/>
 </kw>
 <kw name="Get Month Number From Name" owner="resourses">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.284487" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<msg time="2026-07-27T12:00:38.832703" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
 <var>${months}</var>
 <arg>January</arg>
 <arg>February</arg>
@@ -622,84 +625,84 @@
 <arg>November</arg>
 <arg>December</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.284208" elapsed="0.000306"/>
+<status status="PASS" start="2026-07-27T12:00:38.832416" elapsed="0.000315"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.284987" level="INFO">${month_index} = 6</msg>
+<msg time="2026-07-27T12:00:38.833195" level="INFO">${month_index} = 6</msg>
 <var>${month_index}</var>
 <arg>${months}.index("${month_name}") + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.284623" elapsed="0.000391"/>
+<status status="PASS" start="2026-07-27T12:00:38.832836" elapsed="0.000387"/>
 </kw>
 <return>
 <value>${month_index}</value>
-<status status="PASS" start="2026-07-24T17:18:58.285083" elapsed="0.000033"/>
+<status status="PASS" start="2026-07-27T12:00:38.833295" elapsed="0.000034"/>
 </return>
-<msg time="2026-07-24T17:18:58.285227" level="INFO">${current_month_number} = 6</msg>
+<msg time="2026-07-27T12:00:38.833443" level="INFO">${current_month_number} = 6</msg>
 <var>${current_month_number}</var>
 <arg>${current_month}</arg>
-<status status="PASS" start="2026-07-24T17:18:58.283973" elapsed="0.001278"/>
+<status status="PASS" start="2026-07-27T12:00:38.832196" elapsed="0.001272"/>
 </kw>
 <if>
 <branch type="IF" condition="${current_month_number} == ${target_month_number}">
 <kw name="Exit For Loop" owner="BuiltIn">
 <doc>Stops executing the enclosing FOR loop.</doc>
-<status status="NOT RUN" start="2026-07-24T17:18:58.285486" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.833705" elapsed="0.000026"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.285322" elapsed="0.000224"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.833539" elapsed="0.000225"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.285305" elapsed="0.000277"/>
+<status status="PASS" start="2026-07-27T12:00:38.833521" elapsed="0.000278"/>
 </if>
 <if>
 <branch type="IF" condition="${current_month_number} &lt; ${target_month_number}">
 <kw name="Click Date Picker Next Month" owner="resourses">
-<status status="NOT RUN" start="2026-07-24T17:18:58.285807" elapsed="0.000028"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.834030" elapsed="0.000028"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.285629" elapsed="0.000236"/>
+<status status="NOT RUN" start="2026-07-27T12:00:38.833847" elapsed="0.000241"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click Date Picker Previous Month" owner="resourses">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.286332" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
+<msg time="2026-07-27T12:00:38.834560" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
 <arg>${DATE_PICKER_PREVIOUS_MONTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.286159" elapsed="0.026600"/>
+<status status="PASS" start="2026-07-27T12:00:38.834388" elapsed="0.026570"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.285991" elapsed="0.026870"/>
+<status status="PASS" start="2026-07-27T12:00:38.834217" elapsed="0.026854"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.285898" elapsed="0.027004"/>
+<status status="PASS" start="2026-07-27T12:00:38.834122" elapsed="0.026988"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.285616" elapsed="0.027329"/>
+<status status="PASS" start="2026-07-27T12:00:38.833833" elapsed="0.027318"/>
 </if>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.514396" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2026-07-27T12:00:39.062434" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.313049" elapsed="0.201540"/>
+<status status="PASS" start="2026-07-27T12:00:38.861255" elapsed="0.201363"/>
 </kw>
 <var name="${attempt}">1</var>
-<status status="PASS" start="2026-07-24T17:18:58.273932" elapsed="0.240786"/>
+<status status="PASS" start="2026-07-27T12:00:38.821897" elapsed="0.240833"/>
 </iter>
 <iter>
 <kw name="Get Date Picker Month Text" owner="resourses">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.524943" level="INFO">${month_text} = May</msg>
+<msg time="2026-07-27T12:00:39.073051" level="INFO">${month_text} = May</msg>
 <var>${month_text}</var>
 <arg>xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.515787" elapsed="0.009190"/>
+<status status="PASS" start="2026-07-27T12:00:39.063806" elapsed="0.009278"/>
 </kw>
 <return>
 <value>${month_text}</value>
-<status status="PASS" start="2026-07-24T17:18:58.525040" elapsed="0.000042"/>
+<status status="PASS" start="2026-07-27T12:00:39.073144" elapsed="0.000039"/>
 </return>
-<msg time="2026-07-24T17:18:58.525203" level="INFO">${current_month} = May</msg>
+<msg time="2026-07-27T12:00:39.073301" level="INFO">${current_month} = May</msg>
 <var>${current_month}</var>
-<status status="PASS" start="2026-07-24T17:18:58.515365" elapsed="0.009862"/>
+<status status="PASS" start="2026-07-27T12:00:39.063402" elapsed="0.009924"/>
 </kw>
 <kw name="Get Month Number From Name" owner="resourses">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.525871" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<msg time="2026-07-27T12:00:39.073955" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
 <var>${months}</var>
 <arg>January</arg>
 <arg>February</arg>
@@ -714,84 +717,84 @@
 <arg>November</arg>
 <arg>December</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.525594" elapsed="0.000305"/>
+<status status="PASS" start="2026-07-27T12:00:39.073678" elapsed="0.000304"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.526361" level="INFO">${month_index} = 5</msg>
+<msg time="2026-07-27T12:00:39.074438" level="INFO">${month_index} = 5</msg>
 <var>${month_index}</var>
 <arg>${months}.index("${month_name}") + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.526003" elapsed="0.000385"/>
+<status status="PASS" start="2026-07-27T12:00:39.074085" elapsed="0.000381"/>
 </kw>
 <return>
 <value>${month_index}</value>
-<status status="PASS" start="2026-07-24T17:18:58.526437" elapsed="0.000030"/>
+<status status="PASS" start="2026-07-27T12:00:39.074514" elapsed="0.000032"/>
 </return>
-<msg time="2026-07-24T17:18:58.526576" level="INFO">${current_month_number} = 5</msg>
+<msg time="2026-07-27T12:00:39.074656" level="INFO">${current_month_number} = 5</msg>
 <var>${current_month_number}</var>
 <arg>${current_month}</arg>
-<status status="PASS" start="2026-07-24T17:18:58.525370" elapsed="0.001231"/>
+<status status="PASS" start="2026-07-27T12:00:39.073461" elapsed="0.001218"/>
 </kw>
 <if>
 <branch type="IF" condition="${current_month_number} == ${target_month_number}">
 <kw name="Exit For Loop" owner="BuiltIn">
 <doc>Stops executing the enclosing FOR loop.</doc>
-<status status="NOT RUN" start="2026-07-24T17:18:58.526835" elapsed="0.000026"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.074917" elapsed="0.000026"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.526671" elapsed="0.000223"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.074748" elapsed="0.000228"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.526654" elapsed="0.000274"/>
+<status status="PASS" start="2026-07-27T12:00:39.074730" elapsed="0.000279"/>
 </if>
 <if>
 <branch type="IF" condition="${current_month_number} &lt; ${target_month_number}">
 <kw name="Click Date Picker Next Month" owner="resourses">
-<status status="NOT RUN" start="2026-07-24T17:18:58.527161" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.075236" elapsed="0.000028"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.526977" elapsed="0.000241"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.075056" elapsed="0.000238"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click Date Picker Previous Month" owner="resourses">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.527691" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
+<msg time="2026-07-27T12:00:39.075777" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
 <arg>${DATE_PICKER_PREVIOUS_MONTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.527515" elapsed="0.026762"/>
+<status status="PASS" start="2026-07-27T12:00:39.075606" elapsed="0.027843"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.527348" elapsed="0.027044"/>
+<status status="PASS" start="2026-07-27T12:00:39.075426" elapsed="0.028162"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.527251" elapsed="0.027177"/>
+<status status="PASS" start="2026-07-27T12:00:39.075326" elapsed="0.028302"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.526964" elapsed="0.027504"/>
+<status status="PASS" start="2026-07-27T12:00:39.075043" elapsed="0.028625"/>
 </if>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.756373" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2026-07-27T12:00:39.304823" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.554569" elapsed="0.201994"/>
+<status status="PASS" start="2026-07-27T12:00:39.103776" elapsed="0.201238"/>
 </kw>
 <var name="${attempt}">2</var>
-<status status="PASS" start="2026-07-24T17:18:58.515108" elapsed="0.241563"/>
+<status status="PASS" start="2026-07-27T12:00:39.063142" elapsed="0.241976"/>
 </iter>
 <iter>
 <kw name="Get Date Picker Month Text" owner="resourses">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.766917" level="INFO">${month_text} = April</msg>
+<msg time="2026-07-27T12:00:39.315440" level="INFO">${month_text} = April</msg>
 <var>${month_text}</var>
 <arg>xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.757699" elapsed="0.009252"/>
+<status status="PASS" start="2026-07-27T12:00:39.306170" elapsed="0.009301"/>
 </kw>
 <return>
 <value>${month_text}</value>
-<status status="PASS" start="2026-07-24T17:18:58.767016" elapsed="0.000042"/>
+<status status="PASS" start="2026-07-27T12:00:39.315529" elapsed="0.000039"/>
 </return>
-<msg time="2026-07-24T17:18:58.767179" level="INFO">${current_month} = April</msg>
+<msg time="2026-07-27T12:00:39.315687" level="INFO">${current_month} = April</msg>
 <var>${current_month}</var>
-<status status="PASS" start="2026-07-24T17:18:58.757308" elapsed="0.009896"/>
+<status status="PASS" start="2026-07-27T12:00:39.305766" elapsed="0.009947"/>
 </kw>
 <kw name="Get Month Number From Name" owner="resourses">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.767837" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<msg time="2026-07-27T12:00:39.316346" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
 <var>${months}</var>
 <arg>January</arg>
 <arg>February</arg>
@@ -806,84 +809,84 @@
 <arg>November</arg>
 <arg>December</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.767560" elapsed="0.000304"/>
+<status status="PASS" start="2026-07-27T12:00:39.316063" elapsed="0.000311"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.768363" level="INFO">${month_index} = 4</msg>
+<msg time="2026-07-27T12:00:39.316861" level="INFO">${month_index} = 4</msg>
 <var>${month_index}</var>
 <arg>${months}.index("${month_name}") + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.767996" elapsed="0.000394"/>
+<status status="PASS" start="2026-07-27T12:00:39.316501" elapsed="0.000387"/>
 </kw>
 <return>
 <value>${month_index}</value>
-<status status="PASS" start="2026-07-24T17:18:58.768440" elapsed="0.000030"/>
+<status status="PASS" start="2026-07-27T12:00:39.316938" elapsed="0.000031"/>
 </return>
-<msg time="2026-07-24T17:18:58.768579" level="INFO">${current_month_number} = 4</msg>
+<msg time="2026-07-27T12:00:39.317078" level="INFO">${current_month_number} = 4</msg>
 <var>${current_month_number}</var>
 <arg>${current_month}</arg>
-<status status="PASS" start="2026-07-24T17:18:58.767339" elapsed="0.001264"/>
+<status status="PASS" start="2026-07-27T12:00:39.315846" elapsed="0.001256"/>
 </kw>
 <if>
 <branch type="IF" condition="${current_month_number} == ${target_month_number}">
 <kw name="Exit For Loop" owner="BuiltIn">
 <doc>Stops executing the enclosing FOR loop.</doc>
-<status status="NOT RUN" start="2026-07-24T17:18:58.768835" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.317336" elapsed="0.000027"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.768672" elapsed="0.000225"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.317171" elapsed="0.000226"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.768656" elapsed="0.000275"/>
+<status status="PASS" start="2026-07-27T12:00:39.317154" elapsed="0.000276"/>
 </if>
 <if>
 <branch type="IF" condition="${current_month_number} &lt; ${target_month_number}">
 <kw name="Click Date Picker Next Month" owner="resourses">
-<status status="NOT RUN" start="2026-07-24T17:18:58.769158" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.317655" elapsed="0.000028"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:58.768981" elapsed="0.000235"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.317477" elapsed="0.000237"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click Date Picker Previous Month" owner="resourses">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:58.769680" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
+<msg time="2026-07-27T12:00:39.318193" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/preceding-sibling::div[contains(@class,"rounded-md text-white hover:bg-[#083053] pl-1")]'.</msg>
 <arg>${DATE_PICKER_PREVIOUS_MONTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.769510" elapsed="0.027219"/>
+<status status="PASS" start="2026-07-27T12:00:39.318017" elapsed="0.027648"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.769342" elapsed="0.027529"/>
+<status status="PASS" start="2026-07-27T12:00:39.317841" elapsed="0.027927"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:58.769249" elapsed="0.027661"/>
+<status status="PASS" start="2026-07-27T12:00:39.317746" elapsed="0.028060"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:58.768966" elapsed="0.027985"/>
+<status status="PASS" start="2026-07-27T12:00:39.317463" elapsed="0.028383"/>
 </if>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-07-24T17:18:58.998207" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2026-07-27T12:00:39.546549" level="INFO">Slept 200 milliseconds.</msg>
 <arg>200ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.797053" elapsed="0.201348"/>
+<status status="PASS" start="2026-07-27T12:00:39.345952" elapsed="0.200786"/>
 </kw>
 <var name="${attempt}">3</var>
-<status status="PASS" start="2026-07-24T17:18:58.757043" elapsed="0.241481"/>
+<status status="PASS" start="2026-07-27T12:00:39.305507" elapsed="0.241336"/>
 </iter>
 <iter>
 <kw name="Get Date Picker Month Text" owner="resourses">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:59.008569" level="INFO">${month_text} = March</msg>
+<msg time="2026-07-27T12:00:39.557231" level="INFO">${month_text} = March</msg>
 <var>${month_text}</var>
 <arg>xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:58.999537" elapsed="0.009067"/>
+<status status="PASS" start="2026-07-27T12:00:39.547922" elapsed="0.009343"/>
 </kw>
 <return>
 <value>${month_text}</value>
-<status status="PASS" start="2026-07-24T17:18:59.008669" elapsed="0.000041"/>
+<status status="PASS" start="2026-07-27T12:00:39.557327" elapsed="0.000040"/>
 </return>
-<msg time="2026-07-24T17:18:59.008831" level="INFO">${current_month} = March</msg>
+<msg time="2026-07-27T12:00:39.557489" level="INFO">${current_month} = March</msg>
 <var>${current_month}</var>
-<status status="PASS" start="2026-07-24T17:18:58.999143" elapsed="0.009713"/>
+<status status="PASS" start="2026-07-27T12:00:39.547517" elapsed="0.009998"/>
 </kw>
 <kw name="Get Month Number From Name" owner="resourses">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-07-24T17:18:59.009494" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<msg time="2026-07-27T12:00:39.558152" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
 <var>${months}</var>
 <arg>January</arg>
 <arg>February</arg>
@@ -898,81 +901,81 @@
 <arg>November</arg>
 <arg>December</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.009216" elapsed="0.000305"/>
+<status status="PASS" start="2026-07-27T12:00:39.557872" elapsed="0.000307"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-07-24T17:18:59.009982" level="INFO">${month_index} = 3</msg>
+<msg time="2026-07-27T12:00:39.558638" level="INFO">${month_index} = 3</msg>
 <var>${month_index}</var>
 <arg>${months}.index("${month_name}") + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.009630" elapsed="0.000380"/>
+<status status="PASS" start="2026-07-27T12:00:39.558286" elapsed="0.000379"/>
 </kw>
 <return>
 <value>${month_index}</value>
-<status status="PASS" start="2026-07-24T17:18:59.010059" elapsed="0.000032"/>
+<status status="PASS" start="2026-07-27T12:00:39.558715" elapsed="0.000033"/>
 </return>
-<msg time="2026-07-24T17:18:59.010208" level="INFO">${current_month_number} = 3</msg>
+<msg time="2026-07-27T12:00:39.558858" level="INFO">${current_month_number} = 3</msg>
 <var>${current_month_number}</var>
 <arg>${current_month}</arg>
-<status status="PASS" start="2026-07-24T17:18:59.008991" elapsed="0.001241"/>
+<status status="PASS" start="2026-07-27T12:00:39.557650" elapsed="0.001232"/>
 </kw>
 <if>
 <branch type="IF" condition="${current_month_number} == ${target_month_number}">
 <kw name="Exit For Loop" owner="BuiltIn">
-<msg time="2026-07-24T17:18:59.010650" level="INFO">Exiting for loop altogether.</msg>
+<msg time="2026-07-27T12:00:39.559304" level="INFO">Exiting for loop altogether.</msg>
 <doc>Stops executing the enclosing FOR loop.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.010468" elapsed="0.000252"/>
+<status status="PASS" start="2026-07-27T12:00:39.559118" elapsed="0.000256"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:18:59.010303" elapsed="0.000460"/>
+<status status="PASS" start="2026-07-27T12:00:39.558951" elapsed="0.000466"/>
 </branch>
-<status status="PASS" start="2026-07-24T17:18:59.010286" elapsed="0.000516"/>
+<status status="PASS" start="2026-07-27T12:00:39.558934" elapsed="0.000521"/>
 </if>
 <if>
 <branch type="IF" condition="${current_month_number} &lt; ${target_month_number}">
 <kw name="Click Date Picker Next Month" owner="resourses">
-<status status="NOT RUN" start="2026-07-24T17:18:59.010958" elapsed="0.000028"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.559612" elapsed="0.000027"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:59.010855" elapsed="0.000161"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.559508" elapsed="0.000162"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click Date Picker Previous Month" owner="resourses">
-<status status="NOT RUN" start="2026-07-24T17:18:59.011143" elapsed="0.000026"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.559800" elapsed="0.000027"/>
 </kw>
-<status status="NOT RUN" start="2026-07-24T17:18:59.011050" elapsed="0.000149"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.559701" elapsed="0.000156"/>
 </branch>
-<status status="NOT RUN" start="2026-07-24T17:18:59.010841" elapsed="0.000388"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.559494" elapsed="0.000393"/>
 </if>
 <kw name="Sleep" owner="BuiltIn">
 <arg>200ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-07-24T17:18:59.011301" elapsed="0.000026"/>
+<status status="NOT RUN" start="2026-07-27T12:00:39.559954" elapsed="0.000024"/>
 </kw>
 <var name="${attempt}">4</var>
-<status status="PASS" start="2026-07-24T17:18:58.998894" elapsed="0.012468"/>
+<status status="PASS" start="2026-07-27T12:00:39.547242" elapsed="0.012771"/>
 </iter>
 <var>${attempt}</var>
 <value>12</value>
-<status status="PASS" start="2026-07-24T17:18:58.028995" elapsed="0.982411"/>
+<status status="PASS" start="2026-07-27T12:00:38.576456" elapsed="0.983604"/>
 </for>
 <kw name="Get Date Picker Month Text" owner="resourses">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:59.018696" level="INFO">${month_text} = March</msg>
+<msg time="2026-07-27T12:00:39.567411" level="INFO">${month_text} = March</msg>
 <var>${month_text}</var>
 <arg>xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/span</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.011706" elapsed="0.007022"/>
+<status status="PASS" start="2026-07-27T12:00:39.560358" elapsed="0.007086"/>
 </kw>
 <return>
 <value>${month_text}</value>
-<status status="PASS" start="2026-07-24T17:18:59.018787" elapsed="0.000036"/>
+<status status="PASS" start="2026-07-27T12:00:39.567502" elapsed="0.000036"/>
 </return>
-<msg time="2026-07-24T17:18:59.018940" level="INFO">${current_month} = March</msg>
+<msg time="2026-07-27T12:00:39.567655" level="INFO">${current_month} = March</msg>
 <var>${current_month}</var>
-<status status="PASS" start="2026-07-24T17:18:59.011533" elapsed="0.007433"/>
+<status status="PASS" start="2026-07-27T12:00:39.560186" elapsed="0.007494"/>
 </kw>
 <kw name="Get Month Number From Name" owner="resourses">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-07-24T17:18:59.019576" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
+<msg time="2026-07-27T12:00:39.568290" level="INFO">${months} = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</msg>
 <var>${months}</var>
 <arg>January</arg>
 <arg>February</arg>
@@ -987,795 +990,771 @@
 <arg>November</arg>
 <arg>December</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.019310" elapsed="0.000295"/>
+<status status="PASS" start="2026-07-27T12:00:39.568020" elapsed="0.000298"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-07-24T17:18:59.020075" level="INFO">${month_index} = 3</msg>
+<msg time="2026-07-27T12:00:39.568783" level="INFO">${month_index} = 3</msg>
 <var>${month_index}</var>
 <arg>${months}.index("${month_name}") + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.019732" elapsed="0.000371"/>
+<status status="PASS" start="2026-07-27T12:00:39.568444" elapsed="0.000366"/>
 </kw>
 <return>
 <value>${month_index}</value>
-<status status="PASS" start="2026-07-24T17:18:59.020152" elapsed="0.000030"/>
+<status status="PASS" start="2026-07-27T12:00:39.568861" elapsed="0.000032"/>
 </return>
-<msg time="2026-07-24T17:18:59.020293" level="INFO">${current_month_number} = 3</msg>
+<msg time="2026-07-27T12:00:39.569004" level="INFO">${current_month_number} = 3</msg>
 <var>${current_month_number}</var>
 <arg>${current_month}</arg>
-<status status="PASS" start="2026-07-24T17:18:59.019094" elapsed="0.001223"/>
+<status status="PASS" start="2026-07-27T12:00:39.567808" elapsed="0.001220"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
 <arg>${current_month_number}</arg>
 <arg>${target_month_number}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.020403" elapsed="0.000264"/>
+<status status="PASS" start="2026-07-27T12:00:39.569117" elapsed="0.000262"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${DATE_PICKER_DAY}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.020762" elapsed="0.008688"/>
+<status status="PASS" start="2026-07-27T12:00:39.569474" elapsed="0.008521"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:59.029823" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/parent::div[contains(@class,"flex items-center gap-2")]/following-sibling::div[contains(@class,"grid-cols-7")]/div[normalize-space(.)="13"]'.</msg>
+<msg time="2026-07-27T12:00:39.578370" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Date of Birth"]]/preceding-sibling::div[contains(@class,"cursor-default")]//div[contains(@class,"justify-center items-center gap-2")]/parent::div[contains(@class,"flex items-center gap-2")]/following-sibling::div[contains(@class,"grid-cols-7")]/div[normalize-space(.)="13"]'.</msg>
 <arg>${DATE_PICKER_DAY}/div[normalize-space(.)="${day}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.029571" elapsed="0.038682"/>
+<status status="PASS" start="2026-07-27T12:00:39.578113" elapsed="0.037303"/>
 </kw>
 <arg>2024</arg>
 <arg>3</arg>
 <arg>13</arg>
-<status status="PASS" start="2026-07-24T17:18:57.867964" elapsed="1.200389"/>
+<status status="PASS" start="2026-07-27T12:00:38.417971" elapsed="1.197547"/>
+</kw>
+<kw name="Check Age After Select Date Of Birth" owner="resourses">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-07-27T12:00:39.624807" level="INFO">${actual_age} = 2 years</msg>
+<var>${actual_age}</var>
+<arg>name=age</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-27T12:00:39.615962" elapsed="0.008882"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_age}</arg>
+<arg>${expected_age}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-07-27T12:00:39.624969" elapsed="0.000309"/>
+</kw>
+<arg>2 years</arg>
+<status status="PASS" start="2026-07-27T12:00:39.615724" elapsed="0.009622"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.068847" elapsed="0.010698"/>
+<status status="PASS" start="2026-07-27T12:00:39.625790" elapsed="0.010783"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.079694" elapsed="0.008942"/>
+<status status="PASS" start="2026-07-27T12:00:39.636718" elapsed="0.008690"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.088773" elapsed="0.273495"/>
+<status status="PASS" start="2026-07-27T12:00:39.645532" elapsed="0.266894"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:59.362940" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Country Of Birth"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:39.913092" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Country Of Birth"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.362535" elapsed="0.040306"/>
+<status status="PASS" start="2026-07-27T12:00:39.912687" elapsed="0.039786"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.402990" elapsed="0.216478"/>
+<status status="PASS" start="2026-07-27T12:00:39.952623" elapsed="0.219945"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:59.619847" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Thailand'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:40.172991" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Thailand'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.619612" elapsed="0.041095"/>
+<status status="PASS" start="2026-07-27T12:00:40.172720" elapsed="0.040606"/>
 </kw>
 <arg>${COUNTRY_OF_BIRTH}</arg>
 <arg>Thailand</arg>
-<status status="PASS" start="2026-07-24T17:18:59.068579" elapsed="0.592235"/>
+<status status="PASS" start="2026-07-27T12:00:39.625552" elapsed="0.587878"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.661412" elapsed="0.009490"/>
+<status status="PASS" start="2026-07-27T12:00:40.214032" elapsed="0.010218"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.671043" elapsed="0.009207"/>
+<status status="PASS" start="2026-07-27T12:00:40.224394" elapsed="0.010264"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.680387" elapsed="0.261300"/>
+<status status="PASS" start="2026-07-27T12:00:40.234794" elapsed="0.276792"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:18:59.942225" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Breed"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:40.512254" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Breed"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.941929" elapsed="0.038365"/>
+<status status="PASS" start="2026-07-27T12:00:40.511849" elapsed="0.038271"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:18:59.980450" elapsed="0.218202"/>
+<status status="PASS" start="2026-07-27T12:00:40.550270" elapsed="0.217300"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:00.199023" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Warmblood'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:40.767959" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Warmblood'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.198796" elapsed="0.036764"/>
+<status status="PASS" start="2026-07-27T12:00:40.767717" elapsed="0.041062"/>
 </kw>
 <arg>${BREED}</arg>
 <arg>Warmblood</arg>
-<status status="PASS" start="2026-07-24T17:18:59.661039" elapsed="0.574618"/>
+<status status="PASS" start="2026-07-27T12:00:40.213655" elapsed="0.595224"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.236119" elapsed="0.014759"/>
+<status status="PASS" start="2026-07-27T12:00:40.809367" elapsed="0.009877"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.251024" elapsed="0.009562"/>
+<status status="PASS" start="2026-07-27T12:00:40.819383" elapsed="0.009474"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.260724" elapsed="0.266287"/>
+<status status="PASS" start="2026-07-27T12:00:40.829019" elapsed="0.263962"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:00.527675" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Studbook"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:41.093662" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Studbook"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.527275" elapsed="0.037527"/>
+<status status="PASS" start="2026-07-27T12:00:41.093250" elapsed="0.038866"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.564950" elapsed="0.218156"/>
+<status status="PASS" start="2026-07-27T12:00:41.132275" elapsed="0.220480"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:00.783528" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Hanoverian Studbook'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:41.353135" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Hanoverian Studbook'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.783293" elapsed="0.038338"/>
+<status status="PASS" start="2026-07-27T12:00:41.352900" elapsed="0.040582"/>
 </kw>
 <arg>${STUDBOOK}</arg>
 <arg>Hanoverian Studbook</arg>
-<status status="PASS" start="2026-07-24T17:19:00.235864" elapsed="0.585866"/>
+<status status="PASS" start="2026-07-27T12:00:40.809095" elapsed="0.584487"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.822204" elapsed="0.011706"/>
+<status status="PASS" start="2026-07-27T12:00:41.394085" elapsed="0.009778"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.834056" elapsed="0.009310"/>
+<status status="PASS" start="2026-07-27T12:00:41.404003" elapsed="0.009403"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:19:00.843504" elapsed="0.266685"/>
+<status status="PASS" start="2026-07-27T12:00:41.413540" elapsed="0.282006"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.110849" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Color"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:41.695932" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Color"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.110453" elapsed="0.038681"/>
+<status status="PASS" start="2026-07-27T12:00:41.695700" elapsed="0.038382"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.149291" elapsed="0.217005"/>
+<status status="PASS" start="2026-07-27T12:00:41.734239" elapsed="0.215410"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.366732" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Bay'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:41.950028" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Bay'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.366496" elapsed="0.038268"/>
+<status status="PASS" start="2026-07-27T12:00:41.949792" elapsed="0.042528"/>
 </kw>
 <arg>${COLOR}</arg>
 <arg>Bay</arg>
-<status status="PASS" start="2026-07-24T17:19:00.821937" elapsed="0.582923"/>
+<status status="PASS" start="2026-07-27T12:00:41.393810" elapsed="0.598612"/>
 </kw>
 <kw name="Verify Height Field Rejects Value Exceeding Maximum" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEIGHT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.405322" elapsed="0.013208"/>
+<status status="PASS" start="2026-07-27T12:00:41.992939" elapsed="0.009678"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.418912" level="INFO">Typing text '300' into text field 'name=height'.</msg>
+<msg time="2026-07-27T12:00:42.002995" level="INFO">Typing text '300' into text field 'xpath=//*[@name='height']'.</msg>
 <arg>${HEIGHT}</arg>
 <arg>${VALUE_HEIGHT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.418675" elapsed="0.058660"/>
+<status status="PASS" start="2026-07-27T12:00:42.002754" elapsed="0.057423"/>
 </kw>
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.483758" level="INFO">${ACTUAL_VALUE} = 300</msg>
+<msg time="2026-07-27T12:00:42.066768" level="INFO">${ACTUAL_VALUE} = 300</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${HEIGHT}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.477485" elapsed="0.006308"/>
+<status status="PASS" start="2026-07-27T12:00:42.060322" elapsed="0.006482"/>
 </kw>
 <kw name="Should Not Be Equal As Strings" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${MAX_HEIGHT}</arg>
 <arg>msg=Field ${FIELD_NAME} ระบบยอมให้กรอกค่าเกิน max ได้ ซึ่งไม่ควรเกิดขึ้น!</arg>
 <doc>Fails if objects are equal after converting them to strings.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.483922" elapsed="0.000373"/>
+<status status="PASS" start="2026-07-27T12:00:42.066937" elapsed="0.000381"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:19:01.484613" level="INFO">ค่าที่กรอกได้จริงในช่อง: 300</msg>
+<msg time="2026-07-27T12:00:42.067644" level="INFO">ค่าที่กรอกได้จริงในช่อง: 300</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.484398" elapsed="0.000268"/>
+<status status="PASS" start="2026-07-27T12:00:42.067425" elapsed="0.000263"/>
 </kw>
 <arg>300</arg>
 <arg>Height</arg>
-<status status="PASS" start="2026-07-24T17:19:01.405079" elapsed="0.079652"/>
+<status status="PASS" start="2026-07-27T12:00:41.992641" elapsed="0.075109"/>
 </kw>
 <kw name="Verify Input For Number Only Field" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD_LOCATOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.485166" elapsed="0.009790"/>
+<status status="PASS" start="2026-07-27T12:00:42.068190" elapsed="0.009728"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.495335" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=microchipNumber'.</msg>
+<msg time="2026-07-27T12:00:42.078294" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=microchipNumber'.</msg>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.495099" elapsed="0.183779"/>
+<status status="PASS" start="2026-07-27T12:00:42.078056" elapsed="0.175935"/>
 </kw>
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.685550" level="INFO">${ACTUAL_VALUE} = 123</msg>
+<msg time="2026-07-27T12:00:42.261744" level="INFO">${ACTUAL_VALUE} = 123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.679029" elapsed="0.006557"/>
+<status status="PASS" start="2026-07-27T12:00:42.254137" elapsed="0.007644"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${NON_NUMERIC_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบตัวอักษรที่ไม่ใช่ตัวเลขหลงเหลือใน field: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.685711" elapsed="0.000424"/>
+<status status="PASS" start="2026-07-27T12:00:42.261907" elapsed="0.000431"/>
 </kw>
 <arg>${MICROCHIP_NUMBER}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>MicrochipNumber</arg>
-<status status="PASS" start="2026-07-24T17:19:01.484906" elapsed="0.201301"/>
+<status status="PASS" start="2026-07-27T12:00:42.067922" elapsed="0.194489"/>
 </kw>
 <kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD_LOCATOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.686719" elapsed="0.009972"/>
+<status status="PASS" start="2026-07-27T12:00:42.262888" elapsed="0.008983"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.697066" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=sire'.</msg>
+<msg time="2026-07-27T12:00:42.272268" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=sire'.</msg>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.696832" elapsed="0.153634"/>
+<status status="PASS" start="2026-07-27T12:00:42.272028" elapsed="0.166343"/>
 </kw>
 <kw name="Field Value Should Not Contain Special Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.857808" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.445374" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.850964" elapsed="0.006883"/>
+<status status="PASS" start="2026-07-27T12:00:42.438884" elapsed="0.006528"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${SPECIAL_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.857974" elapsed="0.000377"/>
+<status status="PASS" start="2026-07-27T12:00:42.445533" elapsed="0.000378"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:19:01.858694" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.446230" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.858476" elapsed="0.000261"/>
+<status status="PASS" start="2026-07-27T12:00:42.446011" elapsed="0.000270"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:01.850647" elapsed="0.008152"/>
+<status status="PASS" start="2026-07-27T12:00:42.438555" elapsed="0.007788"/>
 </kw>
 <kw name="Field Value Should Be Equal To Expected" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.865140" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.452455" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.859205" elapsed="0.005969"/>
+<status status="PASS" start="2026-07-27T12:00:42.446757" elapsed="0.005731"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>msg=Field ${FIELD_NAME} ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.865280" elapsed="0.000385"/>
+<status status="PASS" start="2026-07-27T12:00:42.452598" elapsed="0.000371"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:01.858921" elapsed="0.006816"/>
+<status status="PASS" start="2026-07-27T12:00:42.446468" elapsed="0.006569"/>
 </kw>
 <arg>${SIRE_NAME}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>ทดสอบ${EXPECTED_VALUE}</arg>
 <arg>SireName</arg>
-<status status="PASS" start="2026-07-24T17:19:01.686417" elapsed="0.179379"/>
+<status status="PASS" start="2026-07-27T12:00:42.262590" elapsed="0.190504"/>
 </kw>
 <kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD_LOCATOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.866268" elapsed="0.009627"/>
+<status status="PASS" start="2026-07-27T12:00:42.453553" elapsed="0.009093"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:01.876277" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=dame'.</msg>
+<msg time="2026-07-27T12:00:42.463035" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=dame'.</msg>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:01.876039" elapsed="0.151365"/>
+<status status="PASS" start="2026-07-27T12:00:42.462789" elapsed="0.150178"/>
 </kw>
 <kw name="Field Value Should Not Contain Special Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.034120" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.619735" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.027916" elapsed="0.006242"/>
+<status status="PASS" start="2026-07-27T12:00:42.613485" elapsed="0.006287"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${SPECIAL_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.034274" elapsed="0.000368"/>
+<status status="PASS" start="2026-07-27T12:00:42.619890" elapsed="0.000363"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:19:02.034959" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.620574" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.034744" elapsed="0.000268"/>
+<status status="PASS" start="2026-07-27T12:00:42.620356" elapsed="0.000261"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:02.027593" elapsed="0.007481"/>
+<status status="PASS" start="2026-07-27T12:00:42.613155" elapsed="0.007523"/>
 </kw>
 <kw name="Field Value Should Be Equal To Expected" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.042091" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.626921" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.035485" elapsed="0.006642"/>
+<status status="PASS" start="2026-07-27T12:00:42.621094" elapsed="0.005865"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>msg=Field ${FIELD_NAME} ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.042247" elapsed="0.000389"/>
+<status status="PASS" start="2026-07-27T12:00:42.627078" elapsed="0.000391"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:02.035195" elapsed="0.007510"/>
+<status status="PASS" start="2026-07-27T12:00:42.620807" elapsed="0.006733"/>
 </kw>
 <arg>${DAME_NAME}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>ทดสอบ${EXPECTED_VALUE}</arg>
 <arg>DameName</arg>
-<status status="PASS" start="2026-07-24T17:19:01.865979" elapsed="0.176786"/>
+<status status="PASS" start="2026-07-27T12:00:42.453265" elapsed="0.174334"/>
 </kw>
 <kw name="Verify Input Text Must Not Contain Special Characters" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD_LOCATOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.043235" elapsed="0.008832"/>
+<status status="PASS" start="2026-07-27T12:00:42.628098" elapsed="0.012208"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.052439" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=breeder'.</msg>
+<msg time="2026-07-27T12:00:42.640695" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=breeder'.</msg>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.052208" elapsed="0.146925"/>
+<status status="PASS" start="2026-07-27T12:00:42.640451" elapsed="0.147577"/>
 </kw>
 <kw name="Field Value Should Not Contain Special Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.209602" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.795350" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.199645" elapsed="0.009996"/>
+<status status="PASS" start="2026-07-27T12:00:42.788543" elapsed="0.006846"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${SPECIAL_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.209770" elapsed="0.000395"/>
+<status status="PASS" start="2026-07-27T12:00:42.795510" elapsed="0.000368"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:19:02.210494" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.796222" level="INFO">ค่าที่กรอกได้จริงในช่อง: ทดสอบABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.210272" elapsed="0.000268"/>
+<status status="PASS" start="2026-07-27T12:00:42.796001" elapsed="0.000265"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:02.199320" elapsed="0.011284"/>
+<status status="PASS" start="2026-07-27T12:00:42.788220" elapsed="0.008106"/>
 </kw>
 <kw name="Field Value Should Be Equal To Expected" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.217054" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
+<msg time="2026-07-27T12:00:42.802524" level="INFO">${ACTUAL_VALUE} = ทดสอบABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.211040" elapsed="0.006049"/>
+<status status="PASS" start="2026-07-27T12:00:42.796738" elapsed="0.005820"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>msg=Field ${FIELD_NAME} ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.217226" elapsed="0.000374"/>
+<status status="PASS" start="2026-07-27T12:00:42.802668" elapsed="0.000369"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:02.210738" elapsed="0.006930"/>
+<status status="PASS" start="2026-07-27T12:00:42.796450" elapsed="0.006655"/>
 </kw>
 <arg>${BREEDER}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>ทดสอบ${EXPECTED_VALUE}</arg>
 <arg>Breeder</arg>
-<status status="PASS" start="2026-07-24T17:19:02.042949" elapsed="0.174774"/>
-</kw>
-<kw name="Check Required Passport Section" owner="resourses">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.218236" level="INFO">Clicking button 'xpath=//button[normalize-space()='Add Passport']'.</msg>
-<arg>${ADD_PASSPORT_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.218072" elapsed="0.047430"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${REQUIRED_TYPE_PASSPORT}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.265657" elapsed="0.011086"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.283664" level="INFO">Element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Type"]]/following-sibling::p[contains(@class,"field-error-message") and normalize-space(.)="Required"]' is displayed.</msg>
-<arg>${REQUIRED_TYPE_PASSPORT}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.276896" elapsed="0.006850"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${REQUIRED_COUNTRY_PASSPORT}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.283880" elapsed="0.010378"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.300876" level="INFO">Element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Country"]]/following-sibling::p[contains(@class,"text-red-500") and normalize-space(.)="Required"]' is displayed.</msg>
-<arg>${REQUIRED_COUNTRY_PASSPORT}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.294404" elapsed="0.006545"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${REQUIRED_NUMBER_PASSPORT}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.301075" elapsed="0.010200"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.318135" level="INFO">Element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Number"]]/following-sibling::p[contains(@class,"field-error-message") and normalize-space(.)="Required"]' is displayed.</msg>
-<arg>${REQUIRED_NUMBER_PASSPORT}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.311424" elapsed="0.006785"/>
-</kw>
-<status status="PASS" start="2026-07-24T17:19:02.217894" elapsed="0.100395"/>
+<status status="PASS" start="2026-07-27T12:00:42.627800" elapsed="0.175363"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.318745" elapsed="0.010196"/>
+<status status="PASS" start="2026-07-27T12:00:42.803567" elapsed="0.009554"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.329084" elapsed="0.008554"/>
+<status status="PASS" start="2026-07-27T12:00:42.813258" elapsed="0.008692"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.337774" elapsed="0.277348"/>
+<status status="PASS" start="2026-07-27T12:00:42.822084" elapsed="0.276135"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.615822" level="INFO">Clicking element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Type"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:43.098889" level="INFO">Clicking element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Type"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.615394" elapsed="0.035058"/>
+<status status="PASS" start="2026-07-27T12:00:43.098481" elapsed="0.035594"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.650596" elapsed="0.219011"/>
+<status status="PASS" start="2026-07-27T12:00:43.134317" elapsed="0.215886"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.869978" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Original'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:43.350581" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Original'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.869749" elapsed="0.041020"/>
+<status status="PASS" start="2026-07-27T12:00:43.350345" elapsed="0.037959"/>
 </kw>
 <arg>${PASSPORT_TYPE}</arg>
 <arg>Original</arg>
-<status status="PASS" start="2026-07-24T17:19:02.318485" elapsed="0.592416"/>
-</kw>
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:02.914998" level="INFO">Element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Type"]]/following-sibling::p[contains(@class,"field-error-message") and normalize-space(.)="Required"]' did not exist.</msg>
-<arg>${REQUIRED_TYPE_PASSPORT}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.911102" elapsed="0.003963"/>
+<status status="PASS" start="2026-07-27T12:00:42.803338" elapsed="0.585059"/>
 </kw>
 <kw name="Wait And Select Ant Dropdown" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.915514" elapsed="0.010512"/>
+<status status="PASS" start="2026-07-27T12:00:43.388874" elapsed="0.010784"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.926182" elapsed="0.010211"/>
+<status status="PASS" start="2026-07-27T12:00:43.399802" elapsed="0.009511"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:19:02.936532" elapsed="0.275003"/>
+<status status="PASS" start="2026-07-27T12:00:43.409451" elapsed="0.270462"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.212194" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Country"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
+<msg time="2026-07-27T12:00:43.680588" level="INFO">Clicking element 'xpath=//label[.//span[normalize-space(.)="Country"]]/preceding-sibling::div[contains(@class,"ant-select")]//div[contains(@class,"ant-select-selector")]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.211799" elapsed="0.038309"/>
+<status status="PASS" start="2026-07-27T12:00:43.680177" elapsed="0.039392"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.250257" elapsed="0.216179"/>
+<status status="PASS" start="2026-07-27T12:00:43.719717" elapsed="0.221261"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.466817" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Germany'])[last()]'.</msg>
+<msg time="2026-07-27T12:00:43.941359" level="INFO">Clicking element 'xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='Germany'])[last()]'.</msg>
 <arg>xpath=(//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'ant-select-dropdown-hidden'))]//div[contains(@class,'ant-select-item-option') and @title='${option}'])[last()]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.466583" elapsed="0.040559"/>
+<status status="PASS" start="2026-07-27T12:00:43.941125" elapsed="0.041659"/>
 </kw>
 <arg>${PASSPORT_COUNTRY}</arg>
 <arg>Germany</arg>
-<status status="PASS" start="2026-07-24T17:19:02.915264" elapsed="0.591975"/>
-</kw>
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.512276" level="INFO">Element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Country"]]/following-sibling::p[contains(@class,"text-red-500") and normalize-space(.)="Required"]' did not exist.</msg>
-<arg>${REQUIRED_COUNTRY_PASSPORT}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.507410" elapsed="0.004948"/>
+<status status="PASS" start="2026-07-27T12:00:43.388607" elapsed="0.594274"/>
 </kw>
 <kw name="Verify Input Text Must Not Contain Thai And Special Characters" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD_LOCATOR}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.512921" elapsed="0.008890"/>
+<status status="PASS" start="2026-07-27T12:00:43.983423" elapsed="0.009689"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.522188" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=passportNumber'.</msg>
+<msg time="2026-07-27T12:00:43.993501" level="INFO">Typing text 'ทดสอบABC123!@#$%^&amp;*()' into text field 'name=passportNumber'.</msg>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.521953" elapsed="0.137917"/>
+<status status="PASS" start="2026-07-27T12:00:43.993257" elapsed="0.080868"/>
 </kw>
 <kw name="Field Value Should Not Contain Special Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.666874" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<msg time="2026-07-27T12:00:44.080568" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.660409" elapsed="0.006504"/>
+<status status="PASS" start="2026-07-27T12:00:44.074647" elapsed="0.005957"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${SPECIAL_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบอักขระพิเศษหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.667044" elapsed="0.000415"/>
+<status status="PASS" start="2026-07-27T12:00:44.080718" elapsed="0.000370"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:19:03.667782" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
+<msg time="2026-07-27T12:00:44.081434" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.667565" elapsed="0.000261"/>
+<status status="PASS" start="2026-07-27T12:00:44.081211" elapsed="0.000267"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:03.660071" elapsed="0.007818"/>
+<status status="PASS" start="2026-07-27T12:00:44.074314" elapsed="0.007226"/>
 </kw>
 <kw name="Field Value Should Not Contain Thai Characters" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.675698" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<msg time="2026-07-27T12:00:44.087790" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.668301" elapsed="0.007436"/>
+<status status="PASS" start="2026-07-27T12:00:44.081989" elapsed="0.005835"/>
 </kw>
 <kw name="Should Not Match Regexp" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${THAI_CHAR_PATTERN}</arg>
 <arg>msg=Field ${FIELD_NAME} พบภาษาไทยหลงเหลือใน field ซึ่งไม่ควรเกิดขึ้น: ${ACTUAL_VALUE}</arg>
 <doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.675865" elapsed="0.000366"/>
+<status status="PASS" start="2026-07-27T12:00:44.087932" elapsed="0.000352"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-07-24T17:19:03.676540" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
+<msg time="2026-07-27T12:00:44.088601" level="INFO">ค่าที่กรอกได้จริงในช่อง: ABC123</msg>
 <arg>ค่าที่กรอกได้จริงในช่อง: ${ACTUAL_VALUE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.676331" elapsed="0.000250"/>
+<status status="PASS" start="2026-07-27T12:00:44.088386" elapsed="0.000259"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:03.668014" elapsed="0.008627"/>
+<status status="PASS" start="2026-07-27T12:00:44.081665" elapsed="0.007040"/>
 </kw>
 <kw name="Field Value Should Be Equal To Expected" owner="resourses">
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.682957" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
+<msg time="2026-07-27T12:00:44.096721" level="INFO">${ACTUAL_VALUE} = ABC123</msg>
 <var>${ACTUAL_VALUE}</var>
 <arg>${FIELD_LOCATOR}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.677048" elapsed="0.005940"/>
+<status status="PASS" start="2026-07-27T12:00:44.089120" elapsed="0.007639"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${ACTUAL_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>msg=Field ${FIELD_NAME} ค่าที่เหลือใน field ไม่ตรงกับที่คาดหวัง | Actual: ${ACTUAL_VALUE} | Expected: ${EXPECTED_VALUE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.683094" elapsed="0.000368"/>
+<status status="PASS" start="2026-07-27T12:00:44.096883" elapsed="0.000397"/>
 </kw>
 <arg>${FIELD_LOCATOR}</arg>
 <arg>${INPUT_VALUES}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>${FIELD_NAME}</arg>
-<status status="PASS" start="2026-07-24T17:19:03.676770" elapsed="0.006763"/>
+<status status="PASS" start="2026-07-27T12:00:44.088827" elapsed="0.008525"/>
 </kw>
 <arg>${PASSPORT_NUMBER}</arg>
 <arg>${INPUT_VALUE}</arg>
 <arg>${EXPECTED_VALUE}</arg>
 <arg>PassportNumber</arg>
-<status status="PASS" start="2026-07-24T17:19:03.512598" elapsed="0.170993"/>
-</kw>
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.687315" level="INFO">Element 'xpath=//h3[normalize-space(.)="Passport"]/ancestor::div[contains(@class,"border-gray-200 rounded-xl")] //label[.//span[normalize-space(.)="Number"]]/following-sibling::p[contains(@class,"field-error-message") and normalize-space(.)="Required"]' did not exist.</msg>
-<arg>${REQUIRED_NUMBER_PASSPORT}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.683734" elapsed="0.003642"/>
+<status status="PASS" start="2026-07-27T12:00:43.983092" elapsed="0.114320"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.687710" level="INFO">Clicking button 'xpath=//button[normalize-space()='Add Passport']'.</msg>
+<msg time="2026-07-27T12:00:44.097739" level="INFO">Clicking button 'xpath=//button[normalize-space()='Add Passport']'.</msg>
 <arg>${ADD_PASSPORT_BTN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.687524" elapsed="0.045061"/>
+<status status="PASS" start="2026-07-27T12:00:44.097556" elapsed="0.050939"/>
 </kw>
 <kw name="Check Record Added In Passport Section" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//tr[.//div[normalize-space(.)='Original'] and .//div[normalize-space(.)='Germany'] and .//div[normalize-space(.)='ABC123']]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.733103" elapsed="0.011717"/>
+<status status="PASS" start="2026-07-27T12:00:44.148992" elapsed="0.011843"/>
 </kw>
-<status status="PASS" start="2026-07-24T17:19:03.732871" elapsed="0.012044"/>
+<status status="PASS" start="2026-07-27T12:00:44.148772" elapsed="0.012158"/>
 </kw>
 <kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:03.745296" level="INFO">Sending /Applications/RobotFramework/PJ_Horses/Horses/Assets/Horse4.jpg to browser.</msg>
+<msg time="2026-07-27T12:00:44.161360" level="INFO">Sending /Applications/RobotFramework/PJ_Horses/Horses/Assets/Horse4.jpg to browser.</msg>
 <arg>${Horse_Profile_Photo_PATH}</arg>
 <arg>/Applications/RobotFramework/PJ_Horses/Horses/Assets/Horse4.jpg</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.745069" elapsed="0.022850"/>
+<status status="PASS" start="2026-07-27T12:00:44.161111" elapsed="0.023098"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${SAVE_BTN}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:19:03.768118" elapsed="0.280988"/>
+<status status="PASS" start="2026-07-27T12:00:44.184404" elapsed="0.280132"/>
 </kw>
 <kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:04.049883" level="INFO">Sending /Applications/RobotFramework/PJ_Horses/Horses/Assets/passport.jpg to browser.</msg>
+<msg time="2026-07-27T12:00:44.465335" level="INFO">Sending /Applications/RobotFramework/PJ_Horses/Horses/Assets/passport.jpg to browser.</msg>
 <arg>${Horse_Passport_Photo_PATH}</arg>
 <arg>/Applications/RobotFramework/PJ_Horses/Horses/Assets/passport.jpg</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.049451" elapsed="0.017424"/>
+<status status="PASS" start="2026-07-27T12:00:44.464899" elapsed="0.017155"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HORSE_PASSPORT_RECORD_PATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.067072" elapsed="0.217747"/>
+<status status="PASS" start="2026-07-27T12:00:44.482238" elapsed="0.218692"/>
 </kw>
 <kw name="Wait And Input" owner="resourses">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.285345" elapsed="0.008912"/>
+<status status="PASS" start="2026-07-27T12:00:44.701423" elapsed="0.008663"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.294385" elapsed="0.010564"/>
+<status status="PASS" start="2026-07-27T12:00:44.710214" elapsed="0.009741"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${locator}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.305090" elapsed="0.274047"/>
+<status status="PASS" start="2026-07-27T12:00:44.720094" elapsed="0.263379"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:04.579809" level="INFO">Clicking element 'name=remarks'.</msg>
+<msg time="2026-07-27T12:00:44.984130" level="INFO">Clicking element 'name=remarks'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.579406" elapsed="0.031839"/>
+<status status="PASS" start="2026-07-27T12:00:44.983730" elapsed="0.031442"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:04.611642" level="INFO">Typing text 'This is a test remark ทดสอบหมายเหตุ 1234!@#$#{}().' into text field 'name=remarks'.</msg>
+<msg time="2026-07-27T12:00:45.015663" level="INFO">Typing text 'This is a test remark ทดสอบหมายเหตุ 1234!@#$#{}().' into text field 'name=remarks'.</msg>
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.611397" elapsed="0.343240"/>
+<status status="PASS" start="2026-07-27T12:00:45.015345" elapsed="0.341025"/>
 </kw>
 <arg>${REMARK}</arg>
 <arg>This is a test remark ทดสอบหมายเหตุ 1234!@#$#{}().</arg>
-<status status="PASS" start="2026-07-24T17:19:04.285072" elapsed="0.669670"/>
+<status status="PASS" start="2026-07-27T12:00:44.701155" elapsed="0.655338"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-07-24T17:19:07.955405" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-07-24T17:19:04.954911" elapsed="3.000623"/>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${REMARK}</arg>
+<arg>This is a test remark ทดสอบหมายเหตุ 1234!@#$#{}().</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2026-07-27T12:00:45.356671" elapsed="0.008064"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-07-24T17:19:07.956118" level="INFO">Clicking button 'xpath=//button[normalize-space(.)='Save']'.</msg>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-27T12:00:45.365132" level="INFO">Double clicking element 'xpath=//button[normalize-space(.)='Save']'.</msg>
 <arg>${SAVE_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-07-24T17:19:07.955818" elapsed="0.039772"/>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-27T12:00:45.364917" elapsed="0.264592"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-07-24T17:19:10.996805" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-07-24T17:19:07.995782" elapsed="3.001193"/>
+<kw name="Validate Horse Record In Table" owner="resourses">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TABLE_HORSES}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-27T12:00:45.630028" elapsed="0.218813"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-07-27T12:00:45.855230" level="INFO">${horse_row} = &lt;selenium.webdriver.remote.webelement.WebElement (session="49d1cf3c7c96da99cfef35a7d66e269d", element="f.FF3AFC54599E0281ECE99E403BA8D087.d.E189C81B863AE68C1953FA4B1BF6E01A.e.384")&gt;</msg>
+<var>${horse_row}</var>
+<arg>${TABLE_HORSES}//tr//td//div/div[.//span[@class='font-semibold text-slate-800' and normalize-space(.)='${horse_name}']]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-07-27T12:00:45.849002" elapsed="0.006267"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-27T12:00:45.858572" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="49d1cf3c7c96da99cfef35a7d66e269d", element="f.FF3AFC54599E0281ECE99E403BA8D087.d.E189C81B863AE68C1953FA4B1BF6E01A.e.384")&gt;' is displayed.</msg>
+<arg>${horse_row}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-27T12:00:45.855394" elapsed="0.003242"/>
+</kw>
+<arg>${EXPECTED_VALUE}</arg>
+<status status="PASS" start="2026-07-27T12:00:45.629743" elapsed="0.228966"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-07-27T12:00:45.858852" elapsed="0.086677"/>
 </kw>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2026-07-24T17:18:52.572660" elapsed="18.424683"/>
+<status status="PASS" start="2026-07-27T12:00:32.779671" elapsed="13.166061"/>
 </test>
-<status status="PASS" start="2026-07-24T17:18:52.301807" elapsed="18.696250"/>
+<status status="PASS" start="2026-07-27T12:00:32.529929" elapsed="13.416268"/>
 </suite>
 <statistics>
 <total>
